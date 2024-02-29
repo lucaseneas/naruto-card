@@ -1,0 +1,9 @@
+.ContainerLogo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.Logo{
+    width: 20vw;
+}

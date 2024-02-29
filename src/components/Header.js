@@ -1,8 +1,9 @@
 import './Header.css';
+import logo from './../images/Logo.png'; 
 
 function Header(props){
     return(
-        <container>teste</container>
+        <container className='ContainerLogo'><img className='Logo' src={logo}></img></container>
     )
 }
 

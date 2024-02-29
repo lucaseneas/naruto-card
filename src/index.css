@@ -18,6 +18,7 @@ body {
 
 :root {
   --gradient: linear-gradient(to right,#9000ff,#ff8800);
+  --narutoOrange: #FA9427;
 }
 
 @font-face {

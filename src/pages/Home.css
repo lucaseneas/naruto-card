@@ -1,0 +1,66 @@
+.Main {
+    display: flex;
+}
+
+/*-----------------Left----------------*/
+.DivLeft {
+    width: 33.3333%;
+}
+
+.MenuOptions li {
+    display: flex;
+    align-items: center;
+}
+
+.MenuOptions li:hover {
+    transform: scale(1.1);
+}
+
+.MenuOptions img {
+   height: 2vw;
+}
+
+.MenuOptions p{
+    font-size: 1vw;
+    cursor: pointer;
+}
+/*-----------------Center----------------*/
+.DivCenter {
+    width: 33.3333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.DivCenter button{
+    width: 25vw;
+    height: 4vw;
+    border-radius: 40px;
+    font-size: 3vw;
+    font-family: 'Naruto';
+    background-color: var(--narutoOrange);
+    margin-top: -2vw ;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0) ;
+}
+
+.DivCenter button:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 30px rgb(0, 0, 0) ;
+    cursor: pointer;
+}
+
+.DivCenter img{
+    width: 28vw;
+}
+/*-----------------Right----------------*/
+.DivRight {
+    width: 33.3333%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end ;
+}
+
+.DivRight img{
+    height: 12vw;
+}
