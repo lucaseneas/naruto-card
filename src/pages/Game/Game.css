@@ -1,0 +1,148 @@
+.MainGame{
+    display: flex;
+    overflow: hidden;
+}
+.DivLeftGame{
+    width: 20%;
+}
+.DivLeftGame img{
+    height: 35vw;
+    position: relative;
+    left: -10vw;
+}
+/*-------------Center Game--------------*/
+.DivCenterGame{
+    width: 60%;
+}
+
+.DivOpponent{
+    height: 20vh;
+    display: flex;
+}
+
+.OpponentCard1{
+    position: relative;
+    background-image: url('./../../images/BackgroundCard.png');
+    background-size: cover;
+    border-radius: 1.2vw;
+    width: 13vw;
+    height: 21vw;
+    top: -8vw;
+}
+.OpponentCard2{
+    position: relative;
+    background-image: url('./../../images/BackgroundCard.png');
+    background-size: 13vw 21vw;
+    border-radius: 1.2vw;
+    width: 13vw;
+    height: 21vw;
+    top: -8vw;
+    left: -10vw;
+}
+.OpponentCard3{
+    position: relative;
+    top: -8vw;
+    left: -20vw;
+}
+
+.DivMiddleGame{
+    height: 10%;
+}
+.DivMyCards{
+    display: flex;
+}
+.MyCard1{
+    position: absolute;
+    bottom: 1px;
+    left: 43vh;
+    bottom: -15vh;
+}
+
+.MyCard2{
+    position: absolute;
+    left: 53vh;
+    bottom: -15vh;
+}
+
+.MyCard3{
+    position: absolute;
+    left: 63vh;
+    bottom: -15vh;
+}
+
+.MyCard3Animation:hover,.MyCard2Animation:hover,.MyCard1Animation:hover{
+    animation: go-up 0.4s alternate;
+    cursor: pointer;
+    animation-fill-mode: forwards;
+}
+
+.SelectCard{
+    border: 5px #9d00ff solid;
+    animation: set-my-card 1s alternate;
+    animation-fill-mode:forwards;
+}
+
+@keyframes set-my-card {
+    0%{
+        transform: transitionX();
+    }
+    100%{
+        transform: translateX(30vw) translateY(-8vw);
+       
+    }
+}
+@keyframes go-up{
+    0%{
+        transform: translateY(0vh);
+    }
+    100%{
+        transform: translateY(-7vw);
+        z-index: 20;
+    }
+}
+/*-----------------------*/
+.card{
+    position: relative;
+    width: 13vw;
+    height: 21vw;
+    margin: 5px;
+    perspective: 1000px;
+  }
+  
+  .card .flip {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .card:hover .flip{
+    transform: rotateY(180deg);
+  }
+  
+  .front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .back-card{
+    transform: rotateY(180deg);
+  }
+  .front-card img{
+    width: 13vw;
+    height: 21vw;
+  }
+  
+  .front-card img, .back-card img{
+    border-radius: 12px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3)
+  }
+/*-----------------------*/
+.DivRightGame{
+    width: 20%;
+}
+
+.DivRightGame img{
+    height: 35vw;
+    position: relative;
+    right: -3vw;
+}
+
