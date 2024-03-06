@@ -1,9 +1,42 @@
 import Card from "../../components/Card/Card";
 import './Game.css';
+import {teste} from'./Rules.js';
 
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
 import backgroundCard from '../../images/BackgroundCard.png';
+
+
+function startRound() {
+    selectOpponentCard();
+    getTypeJutsu();
+
+}
+
+function getTypeJutsu() {
+    const random = Math.floor(Math.random() * 3) + 1;
+    const typeJutsu = document.getElementById('DivJutsu');
+    var imgJutsu 
+    switch (random) {
+        case 1:
+            imgJutsu = "Genjutsu";
+            break;
+        case 2:
+            imgJutsu = "Ninjutsu";
+            break;
+        case 3:
+            imgJutsu = "Taijutsu";
+            break;
+
+    }
+    typeJutsu.innerHTML = imgJutsu;
+}
+
+function activeSelectButton() {
+    const activeBtn = document.getElementById('SelectBtn');
+    activeBtn.classList.add('ChoiceBtnActive');
+}
+
 
 function verifyIfActive() {
     const card1 = document.getElementById("MyCard1");
@@ -24,12 +57,18 @@ function verifyIfActive() {
     }
 }
 
-function selectCard(id) {
+function selectMyCard(id) {
     verifyIfActive();
-    const select = document.getElementById(id);
-    select.classList.toggle('SelectCard');
-    select.classList.toggle(id + 'Animation');
+    activeSelectButton();
 
+    const selectMy = document.getElementById(id);
+    selectMy.classList.toggle('SelectCard');
+    selectMy.classList.toggle(id + 'Animation');
+
+}
+function selectOpponentCard() {
+    const selectOpponent = document.getElementById('OpponentCard3Flip');
+    selectOpponent.classList.add('AnimationOpponentCard');
 }
 
 function Game() {
@@ -43,9 +82,9 @@ function Game() {
 
                     <div className='OpponentCard1'></div>
                     <div className='OpponentCard2'></div>
-                    <div className="OpponentCard3">
+                    <div id='OpponentCard3' className="OpponentCard3">
                         <article class="card">
-                            <div class="flip">
+                            <div id='OpponentCard3Flip' class="flip">
                                 <section class="front-card">
                                     <img src={backgroundCard} alt="Back Card" />
                                 </section>
@@ -60,12 +99,13 @@ function Game() {
 
                 </div>
                 <div className="DivMiddleGame">
-
+                    <button id='SelectBtn' onClick={startRound} className="ChoiceBtn">Escolher</button>
+                    <div id='DivJutsu' className="DivJutsu"><button onClick={teste}>gfdgfdgfd</button></div>
                 </div>
                 <div className='DivMyCards'>
-                    <div onClick={() => selectCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card></Card></div>
-                    <div onClick={() => selectCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card></Card></div>
-                    <div onClick={() => selectCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card></Card></div>
+                    <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card></Card></div>
+                    <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card></Card></div>
+                    <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card></Card></div>
                 </div>
 
             </div>

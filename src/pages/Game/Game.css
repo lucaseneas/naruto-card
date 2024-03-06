@@ -1,9 +1,14 @@
+
+
 .MainGame{
     display: flex;
     overflow: hidden;
+    height: 100vh;
 }
 .DivLeftGame{
     width: 20%;
+    display: flex;
+    align-items: center;
 }
 .DivLeftGame img{
     height: 35vw;
@@ -16,57 +21,60 @@
 }
 
 .DivOpponent{
-    height: 20vh;
+    height: 50%;
     display: flex;
 }
 
 .OpponentCard1{
-    position: relative;
-    background-image: url('./../../images/BackgroundCard.png');
-    background-size: cover;
-    border-radius: 1.2vw;
-    width: 13vw;
-    height: 21vw;
-    top: -8vw;
-}
-.OpponentCard2{
-    position: relative;
+    position: absolute;
     background-image: url('./../../images/BackgroundCard.png');
     background-size: 13vw 21vw;
     border-radius: 1.2vw;
     width: 13vw;
     height: 21vw;
-    top: -8vw;
-    left: -10vw;
+    top: 1vw;
+    left: 20%;
+}
+.OpponentCard2{
+    position: absolute;
+    background-image: url('./../../images/BackgroundCard.png');
+    background-size: 13vw 21vw;
+    
+    border-radius: 1.2vw;
+    width: 13vw;
+    height: 21vw;
+    top: 1vw;
+    left: 23%;
 }
 .OpponentCard3{
-    position: relative;
-    top: -8vw;
-    left: -20vw;
+    height: 21vw;
+    position: absolute;
+    top: 1vw;
+    left: 26%;
 }
 
 .DivMiddleGame{
-    height: 10%;
+    height: 20%;
 }
 .DivMyCards{
     display: flex;
+    height: 30%;
 }
 .MyCard1{
     position: absolute;
-    bottom: 1px;
-    left: 43vh;
+    left: 20%;
     bottom: -15vh;
 }
 
 .MyCard2{
     position: absolute;
-    left: 53vh;
+    left: 23%;
     bottom: -15vh;
 }
 
 .MyCard3{
     position: absolute;
-    left: 63vh;
+    left: 26%;
     bottom: -15vh;
 }
 
@@ -77,20 +85,85 @@
 }
 
 .SelectCard{
-    border: 5px #9d00ff solid;
     animation: set-my-card 1s alternate;
     animation-fill-mode:forwards;
 }
 
+.ChoiceBtn{
+    position: absolute;
+    top: 82%;
+    left: 45%;
+    width: 15vw;
+    height: 3vw;
+    border-radius: 40px;
+    font-size: 2vw;
+    font-family: 'Naruto';
+    background-color: #5c5b5bc2;
+    cursor:default;
+    
+
+}
+.ChoiceBtnActive{
+    background-color: var(--narutoOrange);
+    cursor:pointer;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0) ;
+}
+
+.DivJutsu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid #000;
+    width: 6vw;
+    height: 6vw;
+    
+}
 @keyframes set-my-card {
     0%{
+        /*
         transform: transitionX();
+        position: absolute;
+        */
+        
+       
     }
     100%{
+        /*
         transform: translateX(30vw) translateY(-8vw);
+       */    
+    
+       left: 65.7%;
+       bottom: 1%;
+    }
+}
+
+@keyframes set-opponent-card {
+    0%{
+        
+        transform: translateZ(10vw);
+        
+        
+        
+    }
+
+    75%{
+        
+    }
+    100%{
+        
+        
+        transform: translateX(40vw)rotateY(180deg) ;
+
+       
+        
+        
        
     }
 }
+
 @keyframes go-up{
     0%{
         transform: translateY(0vh);
@@ -105,19 +178,21 @@
     position: relative;
     width: 13vw;
     height: 21vw;
-    margin: 5px;
-    perspective: 1000px;
+    
+   perspective: 1000px;
   }
   
   .card .flip {
     transition: transform 0.5s;
     transform-style: preserve-3d;
   }
-  
+  /*
   .card:hover .flip{
-    transform: rotateY(180deg);
+*/.AnimationOpponentCard{
+    animation: set-opponent-card 1s alternate;
+    animation-fill-mode: forwards;
   }
-  
+
   .front-card, .back-card{
     position: absolute;
     backface-visibility: hidden;
@@ -138,6 +213,8 @@
 /*-----------------------*/
 .DivRightGame{
     width: 20%;
+    display: flex;
+    align-items: center;
 }
 
 .DivRightGame img{
