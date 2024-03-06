@@ -1,75 +1,15 @@
 import Card from "../../components/Card/Card";
 import './Game.css';
-import {teste} from'./Rules.js';
+import {startRound, selectMyCard} from'./Rules.js';
 
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
 import backgroundCard from '../../images/BackgroundCard.png';
+import selo from '../../images/Selo.gif';
 
 
-function startRound() {
-    selectOpponentCard();
-    getTypeJutsu();
-
-}
-
-function getTypeJutsu() {
-    const random = Math.floor(Math.random() * 3) + 1;
-    const typeJutsu = document.getElementById('DivJutsu');
-    var imgJutsu 
-    switch (random) {
-        case 1:
-            imgJutsu = "Genjutsu";
-            break;
-        case 2:
-            imgJutsu = "Ninjutsu";
-            break;
-        case 3:
-            imgJutsu = "Taijutsu";
-            break;
-
-    }
-    typeJutsu.innerHTML = imgJutsu;
-}
-
-function activeSelectButton() {
-    const activeBtn = document.getElementById('SelectBtn');
-    activeBtn.classList.add('ChoiceBtnActive');
-}
 
 
-function verifyIfActive() {
-    const card1 = document.getElementById("MyCard1");
-    const card2 = document.getElementById("MyCard2");
-    const card3 = document.getElementById("MyCard3");
-
-    if (card1.classList.contains("SelectCard")) {
-        card1.classList.toggle('SelectCard');
-        card1.classList.toggle('MyCard1Animation');
-    }
-    if (card2.classList.contains("SelectCard")) {
-        card2.classList.toggle('SelectCard');
-        card2.classList.toggle('MyCard2Animation');
-    }
-    if (card3.classList.contains("SelectCard")) {
-        card3.classList.toggle('SelectCard');
-        card3.classList.toggle('MyCard3Animation');
-    }
-}
-
-function selectMyCard(id) {
-    verifyIfActive();
-    activeSelectButton();
-
-    const selectMy = document.getElementById(id);
-    selectMy.classList.toggle('SelectCard');
-    selectMy.classList.toggle(id + 'Animation');
-
-}
-function selectOpponentCard() {
-    const selectOpponent = document.getElementById('OpponentCard3Flip');
-    selectOpponent.classList.add('AnimationOpponentCard');
-}
 
 function Game() {
     return (
@@ -90,7 +30,7 @@ function Game() {
                                 </section>
 
                                 <section class="back-card">
-                                    <Card></Card>
+                                    <Card name='Itachi Uchiha' ninjutsu='7' taijutsu ='6' genjutsu='8'></Card>
                                 </section>
 
                             </div>
@@ -100,12 +40,15 @@ function Game() {
                 </div>
                 <div className="DivMiddleGame">
                     <button id='SelectBtn' onClick={startRound} className="ChoiceBtn">Escolher</button>
-                    <div id='DivJutsu' className="DivJutsu"><button onClick={teste}>gfdgfdgfd</button></div>
+                    <div id='DivJutsu' className="DivJutsu">
+                        <img id='ImgJutsu'src={selo} alt='type jutsu'/>
+                        <p id='PJutsu'>Escolha sua carta</p>
+                    </div>
                 </div>
                 <div className='DivMyCards'>
-                    <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card></Card></div>
-                    <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card></Card></div>
-                    <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card></Card></div>
+                    <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card name='Kisame Hosigaki' ninjutsu='8' taijutsu ='6' genjutsu='2'></Card></div>
+                    <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card name='Naruto Uzumaki' ninjutsu='8' taijutsu ='7' genjutsu='3'></Card></div>
+                    <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name='Neji Hiuga' ninjutsu='5' taijutsu ='7' genjutsu='3'></Card></div>
                 </div>
 
             </div>
