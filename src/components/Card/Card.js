@@ -4,13 +4,13 @@ import taijutsu from './../../images/Taijutsu.png';
 import genjutsu from './../../images/Genjustu.png';
 import itachi from './../../images/ItachiUchiha.png';
 
-function changeBackgroud() {
-    const imgCard = document.getElementById('ImgCard').style.backgroundImage = "url('./../../images/ItachiUchiha.png')";
+export function changeBackgroud() {
+    document.getElementById('ImgCard').innerHTML = 'qda';
     console.log('teste');
 }
 
 function Card(props) {
-
+    
     return (
         <div>
             <div id='ImgCard' className='NarutoCard'>
@@ -22,10 +22,11 @@ function Card(props) {
                     <p id='GenjutsuInfo' className='Info'>Genjutsu<img src={genjutsu} alt='genjutsu' /> {props.genjutsu}</p>
                 </div>
             </div>
+            
         </div>
-
-
+        
     )
+   
 };
 
 export default Card;
