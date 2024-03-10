@@ -1,8 +1,7 @@
-import Card  from "../../components/Card/Card";
-import { changeBackgroud } from "../../components/Card/Card";
+import Card, { changeBackgroud } from "../../components/Card/Card";
 import './Game.css';
 import {startRound, selectMyCard} from'./Rules.js';
-
+import { useEffect } from 'react';
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
 import backgroundCard from '../../images/BackgroundCard.png';
@@ -13,7 +12,11 @@ import selo from '../../images/Selo.gif';
 
 
 function Game() {
-    
+
+    useEffect(()=>{changeBackgroud('Sasuke Uchiha','1');},[]);
+    useEffect(()=>{changeBackgroud('Itachi Uchiha','2');},[]);
+    useEffect(()=>{changeBackgroud('Naruto Uzumaki','3');},[]);
+
     return (
         <main className="MainGame">
             <div className="DivLeftGame">
@@ -48,9 +51,10 @@ function Game() {
                     </div>
                 </div>
                 <div className='DivMyCards'>
-                    <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card name='Kisame Hosigaki' ninjutsu='8' taijutsu ='6' genjutsu='2'></Card></div>
+                    <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card name='Kisame Hosigaki' imgBackground={backgroundSasuke} ninjutsu='8' taijutsu ='6' genjutsu='2'></Card></div>
                     <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card name='Naruto Uzumaki' ninjutsu='8' taijutsu ='7' genjutsu='3'></Card></div>
                     <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name='Neji Hiuga' ninjutsu='5' taijutsu ='7' genjutsu='3'></Card></div>
+                    
                 </div>
                 
             </div>
@@ -61,7 +65,10 @@ function Game() {
         </main>
 
     )
+    
 }
 
-changeBackgroud();
+
+
 export default Game;
+
