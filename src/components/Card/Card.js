@@ -38,7 +38,6 @@ function Card(props) {
     return (
         <div id='TestCard'>
             <div id='ImgCard' className='NarutoCard'>
-
                 <div className='CardInfo'>
                     <h2 id='CardName' className='CardTitle'>{props.name}</h2>
                     <hr className='Line' />

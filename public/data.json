@@ -1,31 +1,31 @@
 [
     {
-        "nome": "Naruto Uzumaki",
-        "ninjustu": "8",
+        "name": "Naruto Uzumaki",
+        "ninjutsu": "8",
         "genjutsu": "3",
         "taijutsu": "7"
     },
     {
-        "nome": "Itachi Uchiha",
-        "ninjustu": "8",
+        "name": "Itachi Uchiha",
+        "ninjutsu": "8",
         "genjutsu": "8",
         "taijutsu": "7"
     },
     {
-        "nome": "Sasuke Uchiha",
-        "ninjustu": "8",
+        "name": "Sasuke Uchiha",
+        "ninjutsu": "8",
         "genjutsu": "6",
         "taijutsu": "7"
     },
     {
-        "nome": "Kakashi Hatake",
-        "ninjustu": "7",
+        "name": "Kakashi Hatake",
+        "ninjutsu": "7",
         "genjutsu": "5",
         "taijutsu": "6"
     },
     {
-        "nome": "Madara Uchiha",
-        "ninjustu": "8",
+        "name": "Madara Uchiha",
+        "ninjutsu": "8",
         "genjutsu": "7",
         "taijutsu": "8"
     }
