@@ -5,7 +5,7 @@ import React, { ReactDOM, useEffect, useState } from 'react';
 
 function Cards() {
 
-    const [ cards , setCards] = useState([])
+    const [cards, setCards] = useState([])
 
     useEffect(() => {
         const searchCards = async () => {
@@ -13,25 +13,28 @@ function Cards() {
             const data = await response.json()
             console.log(data)
             setCards(data)
-            
+
         }
         searchCards()
-    },[])
+    }, [])
 
     return (
-
-        <div id='DivShowCard'>
-            <section>
+        <main className='PageCardsMain'>
+            <h1>Cartas</h1>
+            <div className='DivShowCard'>
                 {cards.length > 0 ? (
                     cards.map((response) => (
-                        <Card name={response.name} ninjutsu={response.ninjutsu} taijutsu={response.taijutsu} genjutsu={response.genjutsu}></Card>
+                        <div className='DivInternalShowCard'>
+                            <Card name={response.name} ninjutsu={response.ninjutsu} taijutsu={response.taijutsu} genjutsu={response.genjutsu} image={response.imageUrl}></Card>
+                        </div>
+
                     )))
-                    : 
+                    :
                     (<p>Carregando cartas...</p>)
                 }
-            </section>
-            
-        </div>
+            </div>
+        </main>
+
 
     )
 }

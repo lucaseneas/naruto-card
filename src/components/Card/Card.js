@@ -38,6 +38,7 @@ function Card(props) {
     return (
         <div id='TestCard'>
             <div id='ImgCard' className='NarutoCard'>
+                <img className='ImgCard' src={props.image}></img>
                 <div className='CardInfo'>
                     <h2 id='CardName' className='CardTitle'>{props.name}</h2>
                     <hr className='Line' />

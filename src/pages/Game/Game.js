@@ -1,7 +1,7 @@
 import Card, { changeBackgroud } from "../../components/Card/Card";
 import './Game.css';
 import {startRound, selectMyCard} from'./Rules.js';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
 import backgroundCard from '../../images/BackgroundCard.png';
@@ -12,11 +12,18 @@ import selo from '../../images/Selo.gif';
 
 
 function Game() {
+    const [cards, setCards] = useState([])
 
-    useEffect(()=>{changeBackgroud('Sasuke Uchiha','1');},[]);
-    useEffect(()=>{changeBackgroud('Itachi Uchiha','2');},[]);
-    useEffect(()=>{changeBackgroud('Naruto Uzumaki','3');},[]);
+    useEffect(() => {
+        const searchCards = async () => {
+            const response = await fetch('data.json')
+            const data = await response.json()
+            console.log(data)
+            setCards(data)
 
+        }
+        searchCards()
+    }, [])
     return (
         <main className="MainGame">
             <div className="DivLeftGame">

@@ -1,0 +1,15 @@
+.DivShowCard{
+    display: flex;
+}
+
+.PageCardsMain h1{
+    font-size: 3vw;
+    margin: 1vw;
+}
+.DivInternalShowCard{
+    margin: 1vw;
+}
+.DivInternalShowCard:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

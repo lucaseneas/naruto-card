@@ -1,32 +1,42 @@
 [
     {
+        "id": "1",
         "name": "Naruto Uzumaki",
         "ninjutsu": "8",
         "genjutsu": "3",
-        "taijutsu": "7"
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/7/7d/Naruto_Part_II.png"
     },
     {
+        "id": "2",
         "name": "Itachi Uchiha",
         "ninjutsu": "8",
         "genjutsu": "8",
-        "taijutsu": "7"
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png"
     },
     {
+        "id": "3",
         "name": "Sasuke Uchiha",
         "ninjutsu": "8",
         "genjutsu": "6",
-        "taijutsu": "7"
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/1/13/Sasuke_Part_2.png"
     },
     {
+           "id": "4",
         "name": "Kakashi Hatake",
         "ninjutsu": "7",
         "genjutsu": "5",
-        "taijutsu": "6"
+        "taijutsu": "6",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/2/25/Kakashi_Part_III.png"
     },
     {
+        "id": "5",
         "name": "Madara Uchiha",
         "ninjutsu": "8",
         "genjutsu": "7",
-        "taijutsu": "8"
+        "taijutsu": "8",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png"
     }
 ]
