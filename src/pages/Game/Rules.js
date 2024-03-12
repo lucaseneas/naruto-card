@@ -2,10 +2,21 @@ import ninjutsu from './../../images/Ninjutsu.png';
 import taijutsu from './../../images/Taijutsu.png';
 import genjutsu from './../../images/Genjustu.png';
 import { type } from '@testing-library/user-event/dist/type';
+import Card from "../../components/Card/Card";
+
+function getRandomNumber(res){
+    return Math.floor(Math.random() * res);
+}
+
+export function getCard() {
 
 
+    fetch('data.json').then(response => response.json()).then( res => console.log(res[getRandomNumber(res.length)].name))
 
-export function selectOpponentCard(){
+
+}
+
+export function selectOpponentCard() {
     const selectOpponent = document.getElementById('OpponentCard3Flip');
     selectOpponent.classList.add('AnimationOpponentCard');
 }
@@ -17,7 +28,7 @@ export function startRound() {
     setTimeout(getTypeJutsu, 4000);
 }
 
-export function activeGif(){
+export function activeGif() {
     const gif = document.getElementById('ImgJutsu');
     const gifWord = document.getElementById('PJutsu');
 
@@ -29,8 +40,8 @@ export function getTypeJutsu() {
     const random = Math.floor(Math.random() * 3) + 1;
     const typeJutsu = document.getElementById('ImgJutsu');
     const gifWord = document.getElementById('PJutsu');
-    
-    var imgJutsu 
+
+    var imgJutsu
 
     switch (random) {
         case 1:
@@ -46,7 +57,7 @@ export function getTypeJutsu() {
             gifWord.innerHTML = 'Genjutsu';
             break;
     }
-    
+
     typeJutsu.src = imgJutsu;
 }
 

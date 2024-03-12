@@ -27,7 +27,6 @@ function Cards() {
                         <div className='DivInternalShowCard'>
                             <Card name={response.name} ninjutsu={response.ninjutsu} taijutsu={response.taijutsu} genjutsu={response.genjutsu} image={response.imageUrl}></Card>
                         </div>
-
                     )))
                     :
                     (<p>Carregando cartas...</p>)

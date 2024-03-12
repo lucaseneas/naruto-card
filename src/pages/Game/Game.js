@@ -1,6 +1,6 @@
 import Card, { changeBackgroud } from "../../components/Card/Card";
 import './Game.css';
-import {startRound, selectMyCard} from'./Rules.js';
+import { startRound, selectMyCard, getCard } from './Rules.js';
 import { useEffect, useState } from 'react';
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
@@ -12,18 +12,8 @@ import selo from '../../images/Selo.gif';
 
 
 function Game() {
-    const [cards, setCards] = useState([])
+    
 
-    useEffect(() => {
-        const searchCards = async () => {
-            const response = await fetch('data.json')
-            const data = await response.json()
-            console.log(data)
-            setCards(data)
-
-        }
-        searchCards()
-    }, [])
     return (
         <main className="MainGame">
             <div className="DivLeftGame">
@@ -57,11 +47,12 @@ function Game() {
                         <p id='PJutsu'>Escolha sua carta</p>
                     </div>
                 </div>
+                {getCard()}
                 <div className='DivMyCards'>
+                    
                     <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card name='Kisame Hosigaki' imgBackground={backgroundSasuke} ninjutsu='8' taijutsu ='6' genjutsu='2'></Card></div>
                     <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card name='Naruto Uzumaki' ninjutsu='8' taijutsu ='7' genjutsu='3'></Card></div>
                     <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name='Neji Hiuga' ninjutsu='5' taijutsu ='7' genjutsu='3'></Card></div>
-                    
                 </div>
                 
             </div>
@@ -69,10 +60,10 @@ function Game() {
                 <img src={backgroundNaruto} alt='naruto'></img>
             </div>
 
-        </main>
+        </main >
 
     )
-    
+
 }
 
 
