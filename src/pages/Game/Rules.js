@@ -3,19 +3,11 @@ import taijutsu from './../../images/Taijutsu.png';
 import genjutsu from './../../images/Genjustu.png';
 import { type } from '@testing-library/user-event/dist/type';
 import Card from "../../components/Card/Card";
+import React, { useEffect, useState } from 'react';
 
-function getRandomNumber(res){
+export function getRandomNumber(res){
     return Math.floor(Math.random() * res);
 }
-
-export function getCard() {
-
-
-    fetch('data.json').then(response => response.json()).then( res => console.log(res[getRandomNumber(res.length)].name))
-
-
-}
-
 export function selectOpponentCard() {
     const selectOpponent = document.getElementById('OpponentCard3Flip');
     selectOpponent.classList.add('AnimationOpponentCard');

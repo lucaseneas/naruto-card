@@ -1,6 +1,6 @@
 import Card, { changeBackgroud } from "../../components/Card/Card";
 import './Game.css';
-import { startRound, selectMyCard, getCard } from './Rules.js';
+import { startRound, selectMyCard, getRandomNumber} from './Rules.js';
 import { useEffect, useState } from 'react';
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
@@ -13,6 +13,28 @@ import selo from '../../images/Selo.gif';
 
 function Game() {
     
+    const [cards, setCards] = useState([])
+
+    useEffect(() => {
+        const searchCards = async () => {
+            const response = await fetch('data.json')
+            const data = await response.json()
+            setCards(data)
+
+        }
+        searchCards()
+    }, [2])
+
+    function getCard() {
+
+        const random = getRandomNumber(cards.length);
+        const name2 = cards[2];
+        console.log(cards[random].name+" e  o id "+cards[random].id);
+        return(<div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name="teste" ninjutsu='8' taijutsu ='7' genjutsu='3'></Card></div>)
+        /*return(<div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name={data[getRandomNumber(data.length)].name} ninjutsu='5' taijutsu ='7' genjutsu='3'></Card></div>)*/
+        /*fetch('data.json').then(response => response.json()).then( res => console.log(res[getRandomNumber(res.length)].name))*/
+    
+    }
 
     return (
         <main className="MainGame">
@@ -47,12 +69,12 @@ function Game() {
                         <p id='PJutsu'>Escolha sua carta</p>
                     </div>
                 </div>
-                {getCard()}
+                
                 <div className='DivMyCards'>
                     
                     <div onClick={() => selectMyCard("MyCard1")} id='MyCard1' className='MyCard1 MyCard1Animation'><Card name='Kisame Hosigaki' imgBackground={backgroundSasuke} ninjutsu='8' taijutsu ='6' genjutsu='2'></Card></div>
                     <div onClick={() => selectMyCard("MyCard2")} id='MyCard2' className='MyCard2 MyCard2Animation'><Card name='Naruto Uzumaki' ninjutsu='8' taijutsu ='7' genjutsu='3'></Card></div>
-                    <div onClick={() => selectMyCard("MyCard3")} id='MyCard3' className='MyCard3 MyCard3Animation'><Card name='Neji Hiuga' ninjutsu='5' taijutsu ='7' genjutsu='3'></Card></div>
+                    {getCard()}
                 </div>
                 
             </div>

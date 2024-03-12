@@ -18,10 +18,14 @@ function Cards() {
         searchCards()
     }, [])
 
+
+    
+
     return (
         <main className='PageCardsMain'>
             <h1>Cartas</h1>
             <div className='DivShowCard'>
+                {console.log("teste")}
                 {cards.length > 0 ? (
                     cards.map((response) => (
                         <div className='DivInternalShowCard'>

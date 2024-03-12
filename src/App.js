@@ -4,8 +4,7 @@ import MyRoutes from './MyRoutes.js';
 import Header from "./components/Header/Header.js";
 function App() {
   return (
-    <BrowserRouter>
-        
+    <BrowserRouter>  
         <MyRoutes></MyRoutes>
     </BrowserRouter>
 
