@@ -38,14 +38,14 @@
     box-sizing:border-box;
     width:100%;
     margin-top: -1vw; 
-    margin-bottom: -0.3vw;
+    margin-bottom: -0.8vw;
 }
 
 .Info{
     display: flex;
     font-size: 0.7vw;
     align-items: center;
-    margin-bottom: -0.6vw;
+    margin-bottom: -1.9vw;
 }
 .Info img{
     height: 1.2vw;

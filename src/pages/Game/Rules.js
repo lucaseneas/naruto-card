@@ -8,7 +8,15 @@ import React, { useEffect, useState } from 'react';
 export function getRandomNumber(res){
     return Math.floor(Math.random() * res);
 }
+
+ export async function getData(){
+    const response = await fetch('data.json');
+    const fetchedData = await response.json();
+     // Aqui você pode usar fetchedData console.log(fetchedData);
+    return fetchedData;
+}
 export function selectOpponentCard() {
+
     const selectOpponent = document.getElementById('OpponentCard3Flip');
     selectOpponent.classList.add('AnimationOpponentCard');
 }
@@ -18,6 +26,36 @@ export function startRound() {
     activeInativeSelectButton();
     selectOpponentCard();
     setTimeout(getTypeJutsu, 4000);
+    setTimeout(verifyWhoWon,5000);
+}
+
+export function verifyWhoWon(){
+    const getJutsuChosed = document.querySelector("#PJutsu");
+    const getJutsuChosedText = getJutsuChosed.textContent;
+
+    const myCardSelected = document.querySelector(".SelectCard");
+    const myJutsuElement = myCardSelected.querySelector("#"+getJutsuChosedText+"Status");
+    const myJutsuElementText = parseInt(myJutsuElement.textContent)
+    
+
+    const opponentCardSelected = document.querySelector("#OpponentCard3");
+    const opponentJutsuElement = opponentCardSelected.querySelector("#"+getJutsuChosedText+"Status");
+    const opponentJutsuElementText = parseInt(opponentJutsuElement.textContent)
+
+    console.log("meu = "+myJutsuElementText+ "Inimigo = "+opponentJutsuElementText);
+    //esta com problema, as vezes esta perdendo
+    if(myJutsuElementText>opponentJutsuElementText){
+        console.log("Você ganhou");
+    }
+    else if(myJutsuElementText==opponentJutsuElementText){
+        console.log("Empate");
+    }
+    else if(myJutsuElementText<opponentJutsuElementText){
+        console.log("Você perdeu");
+    }
+    
+    
+    
 }
 
 export function activeGif() {
@@ -68,14 +106,17 @@ export function verifyIfActive() {
         card1.classList.toggle('SelectCard');
         card1.classList.toggle('MyCard1Animation');
     }
+
     if (card2.classList.contains("SelectCard")) {
         card2.classList.toggle('SelectCard');
         card2.classList.toggle('MyCard2Animation');
     }
+
     if (card3.classList.contains("SelectCard")) {
         card3.classList.toggle('SelectCard');
         card3.classList.toggle('MyCard3Animation');
     }
+    
 }
 
 export function selectMyCard(id) {

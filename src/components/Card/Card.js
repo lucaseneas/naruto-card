@@ -42,9 +42,9 @@ function Card(props) {
                 <div className='CardInfo'>
                     <h2 id='CardName' className='CardTitle'>{props.name}</h2>
                     <hr className='Line' />
-                    <p id='NinjutsuInfso' className='Info'>Ninjutsu<img src={ninjutsu} alt='ninjutsu' />{props.ninjutsu}</p>
-                    <p id='TaijutsuInfo' className='Info'>Taijutsu<img src={taijutsu} alt='taijutsu' /> {props.taijutsu}</p>
-                    <p id='GenjutsuInfo' className='Info'>Genjutsu<img src={genjutsu} alt='genjutsu' /> {props.genjutsu}</p>
+                    <p id='NinjutsuInfo' className='Info'>Ninjutsu<img src={ninjutsu} alt='ninjutsu' /><p id='NinjutsuStatus'>{props.ninjutsu}</p></p>
+                    <p id='TaijutsuInfo' className='Info'>Taijutsu<img src={taijutsu} alt='taijutsu' /><p id='TaijutsuStatus'>{props.taijutsu}</p> </p>
+                    <p id='GenjutsuInfo' className='Info'>Genjutsu<img src={genjutsu} alt='genjutsu' /><p id='GenjutsuStatus'>{props.genjutsu}</p> </p>
 
                 </div>
             </div>
