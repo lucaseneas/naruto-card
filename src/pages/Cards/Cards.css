@@ -1,5 +1,8 @@
+
 .DivShowCard{
     display: flex;
+    
+    flex-wrap: wrap;
 }
 
 .PageCardsMain h1{

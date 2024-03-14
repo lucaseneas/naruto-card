@@ -1,4 +1,5 @@
 import './Home.css';
+import Header from './../../components/Header/Header'
 import kunai from './../../images/Kunai.png';
 import naruto1 from './../../images/Naruto1.png';
 import alvoKunai from './../../images/AlvoKunai.png';
@@ -7,6 +8,7 @@ import {Link} from 'react-router-dom';
 function Home() {
   return (
     <main>
+      <Header></Header>
       <container className='MainHome'>
         <div className='DivLeftHome'>
           <ul className='MenuOptions'>

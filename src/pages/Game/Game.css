@@ -1,19 +1,19 @@
 
-
 .MainGame{
     display: flex;
-    overflow: hidden;
     height: 100vh;
+    overflow:hidden;
 }
 .DivLeftGame{
     width: 20%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .DivLeftGame img{
     height: 35vw;
-    position: relative;
-    left: -10vw;
+    margin-left:-10vw ;
 }
 /*-------------Center Game--------------*/
 .DivCenterGame{
@@ -27,21 +27,12 @@
 
 .OpponentCard1{
     position: absolute;
-    background-image: url('./../../images/BackgroundCard.png');
-    background-size: 13vw 21vw;
-    border-radius: 1.2vw;
-    width: 13vw;
     height: 21vw;
     top: 1vw;
     left: 20%;
 }
 .OpponentCard2{
     position: absolute;
-    background-image: url('./../../images/BackgroundCard.png');
-    background-size: 13vw 21vw;
-    
-    border-radius: 1.2vw;
-    width: 13vw;
     height: 21vw;
     top: 1vw;
     left: 23%;
@@ -52,6 +43,61 @@
     top: 1vw;
     left: 26%;
 }
+
+.opponentCardSelected{
+    
+}
+
+.moveOpponentCard{
+    animation: move-opponent-card 1s ;
+    animation-direction: alternate;
+    animation-fill-mode:forwards;
+}
+
+.ejectCard{
+    animation: eject-card 1s ;
+    animation-direction: alternate;
+    animation-fill-mode:forwards;
+}
+
+/*----------Opponent Card FLip-------------*/
+.card{
+    position: relative;
+    width: 13vw;
+    height: 21vw;
+    
+   perspective: 1000px;
+  }
+  
+  .card .flip {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  .AnimationOpponentCard{
+    animation: set-opponent-card 1s alternate;
+    animation-fill-mode: forwards;
+  }
+  
+
+  .front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .back-card{
+    transform: rotateY(180deg);
+  }
+  .front-card img{
+    width: 13vw;
+    height: 21vw;
+  }
+  
+  .front-card img, .back-card img{
+    border-radius: 12px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3)
+  }
+/*-----------------------*/
 
 .DivMiddleGame{
     height: 20%;
@@ -84,10 +130,23 @@
     animation-fill-mode: forwards;
 }
 
+.winner-my{
+    animation: animationWinner-my 0.5s ;
+    animation-direction: alternate;
+    animation-fill-mode:forwards;
+}
+
+.winner-opponent{
+    animation: animationWinner-opponent 0.5s ;
+    animation-direction: alternate;
+    animation-fill-mode:forwards;
+}
+
 .SelectCard{
     animation: set-my-card 1s alternate;
     animation-fill-mode:forwards;
 }
+
 
 .ChoiceBtn{
     position: absolute;
@@ -138,6 +197,41 @@
 .DivJutsu p{
     font-size: 1.5vw;
 }
+
+@keyframes eject-card {
+    0%{
+    }
+    100%{
+        left: 110vw;
+    }
+}
+
+@keyframes animationWinner-my {
+    0%{
+        left: 65.7%;
+        bottom: 1%;
+        
+    }
+    100%{
+        left: 45%;
+        bottom: 20%;
+       
+    }
+}
+
+@keyframes animationWinner-opponent {
+    0%{
+        left: 65.7%;
+        bottom: 1%;
+        
+    }
+    100%{
+        left: 45%;
+        bottom: 20%;
+       
+    }
+}
+
 @keyframes set-my-card {
     0%{
         /*
@@ -159,27 +253,28 @@
 
 @keyframes set-opponent-card {
     0%{
-        
         transform: translateZ(10vw);
-        
-        
-        
-    }
+  
 
-    75%{
-        
     }
     100%{
-        
-        
-        transform: translateX(40vw)rotateY(180deg) ;
-
-       
-        
-        
-       
+        transform: rotateY(180deg) ;
+    
     }
 }
+
+
+
+@keyframes move-opponent-card {
+    0%{
+    }
+    100%{
+
+        left: 66.4%;
+        top: 1%;
+    }
+}
+
 
 @keyframes go-up{
     0%{
@@ -190,53 +285,17 @@
         z-index: 20;
     }
 }
-/*-----------------------*/
-.card{
-    position: relative;
-    width: 13vw;
-    height: 21vw;
-    
-   perspective: 1000px;
-  }
-  
-  .card .flip {
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-  }
-  /*
-  .card:hover .flip{
-*/.AnimationOpponentCard{
-    animation: set-opponent-card 1s alternate;
-    animation-fill-mode: forwards;
-  }
 
-  .front-card, .back-card{
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-  .back-card{
-    transform: rotateY(180deg);
-  }
-  .front-card img{
-    width: 13vw;
-    height: 21vw;
-  }
-  
-  .front-card img, .back-card img{
-    border-radius: 12px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3)
-  }
-/*-----------------------*/
 .DivRightGame{
     width: 20%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .DivRightGame img{
     height: 35vw;
-    position: relative;
-    right: -3vw;
+    margin-right: -11vw;
 }
 
