@@ -28,8 +28,9 @@
 .OpponentCard1{
     position: absolute;
     height: 21vw;
+    
     top: 1vw;
-    left: 20%;
+    left: 26%;
 }
 .OpponentCard2{
     position: absolute;
@@ -41,7 +42,7 @@
     height: 21vw;
     position: absolute;
     top: 1vw;
-    left: 26%;
+    left: 20%;
 }
 
 .opponentCardSelected{

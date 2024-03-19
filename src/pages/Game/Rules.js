@@ -4,10 +4,11 @@ import genjutsu from './../../images/Genjustu.png';
 import { type } from '@testing-library/user-event/dist/type';
 import Card from "../../components/Card/Card";
 import React, { useEffect, useState } from 'react';
+import selo from './../../images/Selo.gif';
 
 export var myRoundPoint = 0;
 const opponentRoundPoint = 0;
-var round = 3;
+var roundCount = 0;
 
 export function getRandomNumber(res) {
     return Math.floor(Math.random() * res);
@@ -19,14 +20,14 @@ export async function getData() {
     // Aqui você pode usar fetchedData console.log(fetchedData);
     return fetchedData;
 }
-export function selectOpponentCard() {
-    const selectOpponentMove = document.getElementById('OpponentCard'+round);
+export function selectOpponentCard(count) {
+    const selectOpponentMove = document.getElementById('OpponentCard'+count);
     selectOpponentMove.classList.add('opponentCardSelect');
     selectOpponentMove.classList.add('moveOpponentCard');
-    const selectOpponent = document.getElementById('OpponentCard'+round+'Flip');
+    const selectOpponent = document.getElementById('OpponentCard'+count+'Flip');
     selectOpponent.classList.add('AnimationOpponentCard');
-    round -= 1;
-    console.log(round)
+    
+    console.log(count)
 }
 
 /*export function selectOpponentCardTest(){
@@ -48,15 +49,37 @@ function ejectCard(){
     myCard.classList.add('ejectCard')
 }
 
-export function startRound() {
+export function start(){
+    roundCount += 1;
+    disableSelectButton(true);
+    round(roundCount);
+    setTimeout(clean,8000,roundCount);
+    setTimeout(disableSelectButton,10000,false);
+   
+
+}
+
+function round(count){
     activeGif();
+    selectOpponentCard(count);
     removeSelectButton();
-    selectOpponentCard();
-    //selectOpponentCardTest()
     setTimeout(getTypeJutsu, 4000);
     setTimeout(verifyWhoWon, 5000);
-    setTimeout(ejectCard, 5000);
+    setTimeout(ejectCard, 5500);
 }
+
+function clean(count){
+    count += 1;
+    changeGif("Round "+ count);
+    setTimeout(changeGif, 2000,"Selecione sua carta");
+}
+
+function disableSelectButton(condition){
+    const btn = document.querySelector('#SelectBtn')
+    btn.disabled = condition;
+}
+
+
 
 export function verifyWhoWon() {
     const getJutsuChosed = document.querySelector("#PJutsu");
@@ -98,7 +121,16 @@ export function activeGif() {
     const gifWord = document.getElementById('PJutsu');
 
     gifWord.innerHTML = '';
+    gif.src = selo;
     gif.style.display = 'block';
+}
+
+export function changeGif(name){
+    const gif = document.getElementById('ImgJutsu');
+    const gifWord = document.getElementById('PJutsu');
+
+    gifWord.innerHTML = name;
+    gif.style.display = 'none';
 }
 
 export function getTypeJutsu() {

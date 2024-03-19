@@ -1,6 +1,6 @@
 import Card, { changeBackgroud } from "../../components/Card/Card";
 import './Game.css';
-import { startRound, selectMyCard, getRandomNumber, getData, myRoundPoint } from './Rules.js';
+import { start, selectMyCard, getRandomNumber, getData, myRoundPoint } from './Rules.js';
 import { useEffect, useState } from 'react';
 import backgroundNaruto from '../../images/BackgroundNaruto.png';
 import backgroundSasuke from '../../images/BackgroundSasuke.png';
@@ -60,6 +60,30 @@ function Game() {
         const card3Opponent = getRandomNumber(cardData.length)
         return (
             <>
+                <div id='OpponentCard3' className="OpponentCard3">
+                    <article class="card">
+                        <div id='OpponentCard3Flip' class="flip">
+                            <section class="front-card">
+                                <img src={backgroundCard} alt="Back Card" />
+                            </section>
+                            <section class="back-card">
+                                <Card name={cardData[card3Opponent].name} image={cardData[card3Opponent].imageUrl} ninjutsu={cardData[card3Opponent].ninjutsu} taijutsu={cardData[card3Opponent].taijutsu} genjutsu={cardData[card3Opponent].genjutsu}></Card>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+                <div id='OpponentCard2' className='OpponentCard2'>
+                    <article class="card">
+                        <div id='OpponentCard2Flip' class="flip">
+                            <section class="front-card">
+                                <img src={backgroundCard} alt="Back Card" />
+                            </section>
+                            <section class="back-card">
+                                <Card name={cardData[card2Opponent].name} image={cardData[card2Opponent].imageUrl} ninjutsu={cardData[card2Opponent].ninjutsu} taijutsu={cardData[card2Opponent].taijutsu} genjutsu={cardData[card2Opponent].genjutsu}></Card>
+                            </section>
+                        </div>
+                    </article>
+                </div>
                 <div id='OpponentCard1' className='OpponentCard1'>
                     <article class="card">
                         <div id='OpponentCard1Flip' class="flip">
@@ -73,30 +97,8 @@ function Game() {
                     </article>
                 </div>
 
-                <div id='OpponentCard2' className='OpponentCard2'>
-                    <article class="card">
-                        <div id='OpponentCard2Flip' class="flip">
-                            <section class="front-card">
-                                <img src={backgroundCard} alt="Back Card" />
-                            </section>
-                            <section class="back-card">
-                                <Card name={cardData[card1Opponent].name} image={cardData[card1Opponent].imageUrl} ninjutsu={cardData[card1Opponent].ninjutsu} taijutsu={cardData[card1Opponent].taijutsu} genjutsu={cardData[card1Opponent].genjutsu}></Card>
-                            </section>
-                        </div>
-                    </article>
-                </div>
-                <div id='OpponentCard3' className="OpponentCard3">
-                    <article class="card">
-                        <div id='OpponentCard3Flip' class="flip">
-                            <section class="front-card">
-                                <img src={backgroundCard} alt="Back Card" />
-                            </section>
-                            <section class="back-card">
-                                <Card name={cardData[card1Opponent].name} image={cardData[card1Opponent].imageUrl} ninjutsu={cardData[card1Opponent].ninjutsu} taijutsu={cardData[card1Opponent].taijutsu} genjutsu={cardData[card1Opponent].genjutsu}></Card>
-                            </section>
-                        </div>
-                    </article>
-                </div>
+                
+                
             </>
         );
     }
@@ -115,7 +117,7 @@ function Game() {
                     {getOpponentCards()}
                 </div>
                 <div className="DivMiddleGame">
-                    <button id='SelectBtn' onClick={startRound} className="ChoiceBtn">Escolher</button>
+                    <button id='SelectBtn' onClick={start} className="ChoiceBtn">Escolher</button>
                     <div id='DivJutsu' className="DivJutsu">
                         <img id='ImgJutsu' src={selo} alt='type jutsu' />
                         <p id='PJutsu'>Escolha sua carta</p>
