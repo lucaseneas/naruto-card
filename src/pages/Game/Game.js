@@ -36,15 +36,15 @@ function Game() {
 
         return (
             <>
-                <div id='MyCard1' onClick={() => selectMyCard("MyCard1")} className='MyCard1 MyCard1Animation'>
+                <button id='MyCard1' onClick={() => selectMyCard("MyCard1")} className='MyCard1 MyCard1Animation'>
                     <Card name={cardData[card1].name} image={cardData[card1].imageUrl} ninjutsu={cardData[card1].ninjutsu} taijutsu={cardData[card1].taijutsu} genjutsu={cardData[card1].genjutsu}></Card>
-                </div>
-                <div id='MyCard2' onClick={() => selectMyCard("MyCard2")} className='MyCard2 MyCard2Animation'>
+                </button>
+                <button id='MyCard2' onClick={() => selectMyCard("MyCard2")} className='MyCard2 MyCard2Animation'>
                     <Card name={cardData[card2].name} image={cardData[card2].imageUrl} ninjutsu={cardData[card2].ninjutsu} taijutsu={cardData[card2].taijutsu} genjutsu={cardData[card2].genjutsu}></Card>
-                </div>
-                <div id='MyCard3' onClick={() => selectMyCard("MyCard3")} className='MyCard3 MyCard3Animation'>
+                </button>
+                <button id='MyCard3' onClick={() => selectMyCard("MyCard3")} className='MyCard3 MyCard3Animation'>
                     <Card name={cardData[card3].name} image={cardData[card3].imageUrl} ninjutsu={cardData[card3].ninjutsu} taijutsu={cardData[card3].taijutsu} genjutsu={cardData[card3].genjutsu}></Card>
-                </div>
+                </button>
             </>
         );
 
@@ -107,8 +107,8 @@ function Game() {
         <main className="MainGame">
             <div className="DivLeftGame">
                 <div>
-                    <p>voce</p>
-                    <p>{myRoundPoint}</p>
+                    <p>Oponente</p>
+                    <p id='OpponentPoint'>0</p>
                 </div>
                 <img src={backgroundSasuke} alt='sasuke'></img>
             </div>
@@ -132,7 +132,7 @@ function Game() {
             <div className="DivRightGame">
                 <div>
                     <p>voce</p>
-                    <p>{myRoundPoint}</p>
+                    <p id='MyPoint'>0</p>
                 </div>
                 <img src={backgroundNaruto} alt='naruto'></img>
             </div>

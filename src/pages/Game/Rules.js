@@ -7,8 +7,9 @@ import React, { useEffect, useState } from 'react';
 import selo from './../../images/Selo.gif';
 
 export var myRoundPoint = 0;
-const opponentRoundPoint = 0;
+var opponentRoundPoint = 0;
 var roundCount = 0;
+var point
 
 export function getRandomNumber(res) {
     return Math.floor(Math.random() * res);
@@ -53,7 +54,8 @@ export function start(){
     roundCount += 1;
     disableSelectButton(true);
     round(roundCount);
-    setTimeout(clean,8000,roundCount);
+    
+    setTimeout(clean,9000,roundCount);
     setTimeout(disableSelectButton,10000,false);
    
 
@@ -64,8 +66,8 @@ function round(count){
     selectOpponentCard(count);
     removeSelectButton();
     setTimeout(getTypeJutsu, 4000);
-    setTimeout(verifyWhoWon, 5000);
-    setTimeout(ejectCard, 5500);
+    setTimeout(verifyWhoWon, 6000);
+    setTimeout(ejectCard, 9000);
 }
 
 function clean(count){
@@ -77,6 +79,13 @@ function clean(count){
 function disableSelectButton(condition){
     const btn = document.querySelector('#SelectBtn')
     btn.disabled = condition;
+
+    const dsbCard1 = document.querySelector('#MyCard1');
+    const dsbCard2 = document.querySelector('#MyCard2');
+    const dsbCard3 = document.querySelector('#MyCard3');
+    dsbCard1.disabled = condition;
+    dsbCard2.disabled = condition;
+    dsbCard3.disabled = condition;
 }
 
 
@@ -96,24 +105,41 @@ export function verifyWhoWon() {
 
     console.log("meu = " + myJutsuElementText + "Inimigo = " + opponentJutsuElementText);
 
+
+
     if (myJutsuElementText > opponentJutsuElementText) {
         console.log("Você ganhou");
         myRoundPoint = myRoundPoint + 1;
-        console.log(myRoundPoint);
+        console.log("Meus Pontos" + myRoundPoint);
+        attPoints();
+        changeGif("Voce ganhou");
 
         //myCardSelected.classList.remove("SelectCard");
         //myCardSelected.classList.add("winner-my");
     }
     else if (myJutsuElementText == opponentJutsuElementText) {
         console.log("Empate");
+        myRoundPoint = myRoundPoint + 1;
+        opponentRoundPoint = opponentRoundPoint + 1;
+        console.log("Meus Pontos" + myRoundPoint);
+        console.log("Pontos Inimigos" + opponentRoundPoint);
+        attPoints();
+        changeGif("Empate");
     }
     else if (myJutsuElementText < opponentJutsuElementText) {
         console.log("Você perdeu");
-
+        opponentRoundPoint = opponentRoundPoint + 1;
+        console.log("Pontos Inimigos" + opponentRoundPoint);
+        attPoints();
+        changeGif("Voce perdeu");
     }
+}
 
-
-
+function attPoints(){
+    const myPoint = document.querySelector('#MyPoint');
+    const opponentPoint = document.querySelector('#OpponentPoint');
+    myPoint.innerHTML = myRoundPoint;
+    opponentPoint.innerHTML = opponentRoundPoint;
 }
 
 export function activeGif() {

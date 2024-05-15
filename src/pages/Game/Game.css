@@ -111,18 +111,26 @@
     position: absolute;
     left: 20%;
     bottom: -15vh;
+    background-color: #0099cc00
 }
 
 .MyCard2{
     position: absolute;
     left: 23%;
     bottom: -15vh;
+    background-color: #0099cc00
 }
 
 .MyCard3{
     position: absolute;
     left: 26%;
     bottom: -15vh;
+    background-color: #0099cc00
+}
+
+.MyCard1,.MyCard2,.MyCard3,:disabled{
+    color: black;
+    font-family: Naruto, serif;
 }
 
 .MyCard3Animation:hover,.MyCard2Animation:hover,.MyCard1Animation:hover{
