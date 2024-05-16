@@ -4,6 +4,61 @@
     height: 100vh;
     overflow:hidden;
 }
+.StickMenu{
+    display: none;
+    position: absolute;
+    top:10vh;
+    bottom: 10vh;
+    left: 20vw;
+    right: 20vw;
+    z-index: 10;
+    background-color: rgb(116, 26, 26);
+    text-align: center;
+    border-radius: 40px;
+    border: 2px black;
+    background-image: url(../../images/BackgroundStickMenu2.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    box-shadow: 5px 5px 20px #000;
+}
+
+.DivStickMenu{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.DivStickMenu img{
+    height: 15vw;
+}
+.DivStickMenu h4{
+    font-size: 1.6vw;
+    color: white;
+    text-shadow: 5px 3px 5px #000;
+}
+
+.BtnDefault{
+    border-radius: 30px;
+    font-size: 2vw;
+    padding: 12px;
+    font-family: 'Naruto';
+    background-color: var(--narutoOrange);
+    box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    text-decoration: none;
+    color: black;
+}
+
+.BtnDefault:hover{
+    cursor:pointer;
+    box-shadow: 4px 4px 20px rgb(0, 0, 0);
+    transform: scale(1.1);
+}
+
+
+/*-------------Left Game--------------*/
 .DivLeftGame{
     width: 20%;
     display: flex;
@@ -131,6 +186,7 @@
 .MyCard1,.MyCard2,.MyCard3,:disabled{
     color: black;
     font-family: Naruto, serif;
+    padding: 0px;
 }
 
 .MyCard3Animation:hover,.MyCard2Animation:hover,.MyCard1Animation:hover{

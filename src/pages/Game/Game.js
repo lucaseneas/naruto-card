@@ -105,6 +105,17 @@ function Game() {
 
     return (
         <main className="MainGame">
+            <div className="StickMenu" id="StickMenu">
+                <div className="DivStickMenu">
+                    <img></img>
+                    <h4 id='WinOrLose'>Parabens voce ganhou !!</h4>
+                    <a href='./' className="BtnDefault">Voltar</a>
+                    <a href='./game' className="BtnDefault">Jogar Novamente</a>
+                </div>
+                    
+                
+                
+            </div>
             <div className="DivLeftGame">
                 <div>
                     <p>Oponente</p>

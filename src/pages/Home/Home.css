@@ -7,9 +7,15 @@
     width: 33.3333%;
 }
 
+.NoUnderline{
+    text-decoration: none;
+    color: black;
+}
+
 .MenuOptions li {
     display: flex;
     align-items: center;
+    
 }
 
 .MenuOptions li:hover {

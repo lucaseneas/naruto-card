@@ -6,7 +6,7 @@ import Card from "../../components/Card/Card";
 import React, { useEffect, useState } from 'react';
 import selo from './../../images/Selo.gif';
 
-export var myRoundPoint = 0;
+var myRoundPoint = 0;
 var opponentRoundPoint = 0;
 var roundCount = 0;
 var point
@@ -31,14 +31,6 @@ export function selectOpponentCard(count) {
     console.log(count)
 }
 
-/*export function selectOpponentCardTest(){
-    const selectOpponent = document.getElementById('OpponentCard2');
-    selectOpponent.classList.add('moveOpponentCard');
-
-    const selectOpponent2 = document.getElementById('OpponentCard2Flip');
-    selectOpponent2.classList.add('AnimationOpponentCard');
-}
-*/
 
 function ejectCard(){
     const opponentCard = document.querySelector(".opponentCardSelect");
@@ -51,22 +43,43 @@ function ejectCard(){
 }
 
 export function start(){
-    roundCount += 1;
-    disableSelectButton(true);
-    round(roundCount);
     
-    setTimeout(clean,9000,roundCount);
-    setTimeout(disableSelectButton,10000,false);
-   
+        roundCount += 1;
+        disableSelectButton(true);
+        round(roundCount);
+        setTimeout(clean,9000,roundCount);
+        setTimeout(disableSelectButton,10000,false);
+        
+        if(roundCount >= 3){
+            setTimeout(console.log,9000,'finish');
+            setTimeout(activeStickMenu,9000);
+            setTimeout(verifyWhoWon,9000); //------------------------------ARRUMAR
+            roundCount = 0;
+        }
+}
+
+function changeStickMenuData(data){ //-------------------------------------ARRUMAR
+    const h4 = document.querySelector('#WinOrLose');
+    if(data == true){
+        h4.innerHTML = "Parabens voce ganhou !";
+    }
+    else{
+        h4.innerHTML = "Voce perdeu, tente novamente";
+    }
+    
 
 }
 
+function activeStickMenu(){
+    const stickMenu = document.querySelector("#StickMenu");
+    stickMenu.style.display = 'block';
+}
 function round(count){
     activeGif();
     selectOpponentCard(count);
     removeSelectButton();
     setTimeout(getTypeJutsu, 4000);
-    setTimeout(verifyWhoWon, 6000);
+    setTimeout(verifyWhoWonRound, 6000);
     setTimeout(ejectCard, 9000);
 }
 
@@ -88,9 +101,15 @@ function disableSelectButton(condition){
     dsbCard3.disabled = condition;
 }
 
+export function verifyWhoWon(){ //---------------------------------------ARRUMAR
+    const myPoint = document.querySelector('#MyPoint');
+    const opponentPoint = document.querySelector('#OpponentPoint');
+    if(myPoint.innerHTML > opponentPoint.innerHTML){
+        changeStickMenuData(true);
+    }
+}
 
-
-export function verifyWhoWon() {
+export function verifyWhoWonRound() {
     const getJutsuChosed = document.querySelector("#PJutsu");
     const getJutsuChosedText = getJutsuChosed.textContent;
 
@@ -98,13 +117,11 @@ export function verifyWhoWon() {
     const myJutsuElement = myCardSelected.querySelector("#" + getJutsuChosedText + "Status");
     const myJutsuElementText = parseInt(myJutsuElement.textContent)
 
-
-    const opponentCardSelected = document.querySelector("#OpponentCard3");
+    const opponentCardSelected = document.querySelector(".opponentCardSelect");
     const opponentJutsuElement = opponentCardSelected.querySelector("#" + getJutsuChosedText + "Status");
     const opponentJutsuElementText = parseInt(opponentJutsuElement.textContent)
 
     console.log("meu = " + myJutsuElementText + "Inimigo = " + opponentJutsuElementText);
-
 
 
     if (myJutsuElementText > opponentJutsuElementText) {
@@ -113,11 +130,10 @@ export function verifyWhoWon() {
         console.log("Meus Pontos" + myRoundPoint);
         attPoints();
         changeGif("Voce ganhou");
-
         //myCardSelected.classList.remove("SelectCard");
         //myCardSelected.classList.add("winner-my");
     }
-    else if (myJutsuElementText == opponentJutsuElementText) {
+    else if (myJutsuElementText === opponentJutsuElementText) {
         console.log("Empate");
         myRoundPoint = myRoundPoint + 1;
         opponentRoundPoint = opponentRoundPoint + 1;
