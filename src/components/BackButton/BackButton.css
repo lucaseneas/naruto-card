@@ -1,0 +1,8 @@
+.BackButton{
+    background-color: var(--narutoOrange);
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    padding: 1%;
+    border-radius: 50%;
+}

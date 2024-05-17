@@ -1,6 +1,11 @@
 import ninjutsu from './../../images/Ninjutsu.png';
 import taijutsu from './../../images/Taijutsu.png';
 import genjutsu from './../../images/Genjustu.png';
+
+import ImgWin from './../../images/ImgWin.png';
+import ImgDraw from './../../images/ImgDraw.png';
+import ImgLose from './../../images/ImgLose.png';
+
 import { type } from '@testing-library/user-event/dist/type';
 import Card from "../../components/Card/Card";
 import React, { useEffect, useState } from 'react';
@@ -42,29 +47,36 @@ function ejectCard(){
     myCard.classList.add('ejectCard')
 }
 
+//Funcção principal do botão "Escolher"
 export function start(){
-    
         roundCount += 1;
-        disableSelectButton(true);
-        round(roundCount);
-        setTimeout(clean,9000,roundCount);
-        setTimeout(disableSelectButton,10000,false);
+        disableSelectButton(true); //Desabilita o botão
+        round(roundCount); //Inicia o round
+        setTimeout(clean,9000,roundCount); //Deixa as escritas do proximo round pronto
+        setTimeout(disableSelectButton,11000,false);//Habilita o botão
         
         if(roundCount >= 3){
             setTimeout(console.log,9000,'finish');
             setTimeout(activeStickMenu,9000);
-            setTimeout(verifyWhoWon,9000); //------------------------------ARRUMAR
+            setTimeout(verifyWhoWon,9000); 
             roundCount = 0;
         }
 }
 
-function changeStickMenuData(data){ //-------------------------------------ARRUMAR
+function changeStickMenuData(data){ 
     const h4 = document.querySelector('#WinOrLose');
-    if(data == true){
+    const img = document.querySelector('#ImgWinOrLose');
+    if(data == 0){
         h4.innerHTML = "Parabens voce ganhou !";
+        img.src = ImgWin;
     }
-    else{
+    else if(data == 1){
+        h4.innerHTML = "Empate";
+        img.src = ImgDraw;
+    }
+    else if(data == 3){
         h4.innerHTML = "Voce perdeu, tente novamente";
+        img.src = ImgLose;
     }
     
 
@@ -104,8 +116,15 @@ function disableSelectButton(condition){
 export function verifyWhoWon(){ //---------------------------------------ARRUMAR
     const myPoint = document.querySelector('#MyPoint');
     const opponentPoint = document.querySelector('#OpponentPoint');
+    console.log(myPoint.innerHTML)
     if(myPoint.innerHTML > opponentPoint.innerHTML){
-        changeStickMenuData(true);
+        changeStickMenuData(0);
+    }
+    else if(myPoint.innerHTML == opponentPoint.innerHTML){
+        changeStickMenuData(1);
+    }
+    else if(myPoint.innerHTML < opponentPoint.innerHTML){
+        changeStickMenuData(3);
     }
 }
 

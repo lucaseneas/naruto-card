@@ -32,7 +32,7 @@
 
 }
 .DivStickMenu img{
-    height: 15vw;
+    height: 20vw;
 }
 .DivStickMenu h4{
     font-size: 1.6vw;
@@ -119,8 +119,8 @@
 /*----------Opponent Card FLip-------------*/
 .card{
     position: relative;
-    width: 13vw;
-    height: 21vw;
+    width: 12.4vw;
+    height: 18vw;
     
    perspective: 1000px;
   }
@@ -145,8 +145,8 @@
     transform: rotateY(180deg);
   }
   .front-card img{
-    width: 13vw;
-    height: 21vw;
+    width: 12.4vw;
+    height: 18vw;
   }
   
   .front-card img, .back-card img{
@@ -195,6 +195,12 @@
     animation-fill-mode: forwards;
 }
 
+.BtnMyCard{
+ border: none;
+ text-decoration: none;
+    width: 12.4vw;
+    height: 18vw;
+}
 .winner-my{
     animation: animationWinner-my 0.5s ;
     animation-direction: alternate;

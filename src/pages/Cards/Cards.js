@@ -1,6 +1,7 @@
 import './Cards.css';
 import Card from './../../components/Card/Card'
 import React, { ReactDOM, useEffect, useState } from 'react';
+import BackButton from '../../components/BackButton/BackButton';
 
 
 function Cards() {
@@ -23,6 +24,7 @@ function Cards() {
 
     return (
         <main className='PageCardsMain'>
+            <BackButton></BackButton>
             <h1>Cartas</h1>
             <div className='DivShowCard'>
                 {console.log("teste")}

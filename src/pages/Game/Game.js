@@ -36,15 +36,17 @@ function Game() {
 
         return (
             <>
-                <button id='MyCard1' onClick={() => selectMyCard("MyCard1")} className='MyCard1 MyCard1Animation'>
+                <button id='MyCard1' onClick={() => selectMyCard("MyCard1")} className='MyCard1 MyCard1Animation BtnMyCard'>
                     <Card name={cardData[card1].name} image={cardData[card1].imageUrl} ninjutsu={cardData[card1].ninjutsu} taijutsu={cardData[card1].taijutsu} genjutsu={cardData[card1].genjutsu}></Card>
                 </button>
-                <button id='MyCard2' onClick={() => selectMyCard("MyCard2")} className='MyCard2 MyCard2Animation'>
+                <button id='MyCard2' onClick={() => selectMyCard("MyCard2")} className='MyCard2 MyCard2Animation BtnMyCard'>
                     <Card name={cardData[card2].name} image={cardData[card2].imageUrl} ninjutsu={cardData[card2].ninjutsu} taijutsu={cardData[card2].taijutsu} genjutsu={cardData[card2].genjutsu}></Card>
                 </button>
-                <button id='MyCard3' onClick={() => selectMyCard("MyCard3")} className='MyCard3 MyCard3Animation'>
+                <button id='MyCard3' onClick={() => selectMyCard("MyCard3")} className='MyCard3 MyCard3Animation BtnMyCard'>
                     <Card name={cardData[card3].name} image={cardData[card3].imageUrl} ninjutsu={cardData[card3].ninjutsu} taijutsu={cardData[card3].taijutsu} genjutsu={cardData[card3].genjutsu}></Card>
                 </button>
+                
+                
             </>
         );
 
@@ -107,7 +109,7 @@ function Game() {
         <main className="MainGame">
             <div className="StickMenu" id="StickMenu">
                 <div className="DivStickMenu">
-                    <img></img>
+                    <img id='ImgWinOrLose' src='./'></img>
                     <h4 id='WinOrLose'>Parabens voce ganhou !!</h4>
                     <a href='./' className="BtnDefault">Voltar</a>
                     <a href='./game' className="BtnDefault">Jogar Novamente</a>
