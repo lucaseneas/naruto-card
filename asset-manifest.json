@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/naruto-card/static/css/main.62ff85fb.css",
+    "main.js": "/naruto-card/static/js/main.b0faf8eb.js",
+    "static/media/ImgDraw.png": "/naruto-card/static/media/ImgDraw.ddd784d2e4892c53d4c6.png",
+    "static/media/Naruto1.png": "/naruto-card/static/media/Naruto1.dcb4d82cefc09ea0a34a.png",
+    "static/media/BackgroundCard.png": "/naruto-card/static/media/BackgroundCard.9f153b130a68db95af55.png",
+    "static/media/Selo.gif": "/naruto-card/static/media/Selo.41873ac0e1d4e85d3d49.gif",
+    "static/media/ImgWin.png": "/naruto-card/static/media/ImgWin.63caf6848bb9304c7574.png",
+    "static/media/MadaraUchiha.png": "/naruto-card/static/media/MadaraUchiha.5427d415ab3a999c47d6.png",
+    "static/media/BackgroundNaruto.png": "/naruto-card/static/media/BackgroundNaruto.14f0b48c4cc6515b6af8.png",
+    "static/media/NarutoUzumaki.png": "/naruto-card/static/media/NarutoUzumaki.fd3c79fae45f01e4e2f7.png",
+    "static/media/BackgroundSasuke.png": "/naruto-card/static/media/BackgroundSasuke.55db958963bf6c19aff9.png",
+    "static/media/ItachiUchiha.png": "/naruto-card/static/media/ItachiUchiha.9609efa436cad5a999c8.png",
+    "static/media/KakashiHatake.png": "/naruto-card/static/media/KakashiHatake.d88a954ab9ed4a3bea75.png",
+    "static/media/SasukeUchiha.png": "/naruto-card/static/media/SasukeUchiha.a7cf1bebc106ffda161a.png",
+    "static/media/BackgroundStickMenu2.jpg": "/naruto-card/static/media/BackgroundStickMenu2.085077d5ee2fe78492ff.jpg",
+    "static/media/ImgLose.png": "/naruto-card/static/media/ImgLose.8ffdd94bb508801bb6c4.png",
+    "static/media/BackGroundPage.jpg": "/naruto-card/static/media/BackGroundPage.2768f759fb98d88283b2.jpg",
+    "static/media/Logo.png": "/naruto-card/static/media/Logo.109bbe65b41c0b1238c1.png",
+    "static/media/Card.jpg": "/naruto-card/static/media/Card.d76a2b28734fa25db8c0.jpg",
+    "static/media/AlvoKunai.png": "/naruto-card/static/media/AlvoKunai.1497f6b9cda583714e9a.png",
+    "static/media/Genjustu.png": "/naruto-card/static/media/Genjustu.05d4f522f8a2ced8de36.png",
+    "static/media/njnaruto.ttf": "/naruto-card/static/media/njnaruto.eb7e0c70752e2f7b008e.ttf",
+    "static/media/ScrollBackground.jpg": "/naruto-card/static/media/ScrollBackground.cbe46d53435e7046c293.jpg",
+    "static/media/Ninjutsu.png": "/naruto-card/static/media/Ninjutsu.f32dabd57680113c86d2.png",
+    "static/media/Kunai.png": "/naruto-card/static/media/Kunai.8851546e03e32fd5e6aa.png",
+    "static/media/Taijutsu.png": "/naruto-card/static/media/Taijutsu.5948e81b39acaa109771.png",
+    "static/media/Arrow.svg": "/naruto-card/static/media/Arrow.0178155dc890b24362dfd999233f78c0.svg",
+    "index.html": "/naruto-card/index.html",
+    "main.62ff85fb.css.map": "/naruto-card/static/css/main.62ff85fb.css.map",
+    "main.b0faf8eb.js.map": "/naruto-card/static/js/main.b0faf8eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62ff85fb.css",
+    "static/js/main.b0faf8eb.js"
+  ]
+}
