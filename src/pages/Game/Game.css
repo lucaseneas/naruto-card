@@ -70,6 +70,16 @@
     height: 35vw;
     margin-left:-10vw ;
 }
+.DivPoints{
+    background-image: url(./../../images/ScrollBackground.jpg);
+    background-color: rgb(225, 219, 179);
+    border-radius: 20px;
+    border: solid 4px #D6B136;
+    width: 8em;
+    height: 6em;
+    text-align: center;
+}
+
 /*-------------Center Game--------------*/
 .DivCenterGame{
     width: 60%;
@@ -165,21 +175,21 @@
 .MyCard1{
     position: absolute;
     left: 20%;
-    bottom: -15vh;
+    bottom: -6vw;
     background-color: #0099cc00
 }
 
 .MyCard2{
     position: absolute;
     left: 23%;
-    bottom: -15vh;
+    bottom: -6vw;
     background-color: #0099cc00
 }
 
 .MyCard3{
     position: absolute;
     left: 26%;
-    bottom: -15vh;
+    bottom: -6vw;
     background-color: #0099cc00
 }
 
@@ -231,7 +241,8 @@
     background-color: #5c5b5bc2;
     cursor:default;
     display: none;
-    
+    border: none;
+    color: black;
 
 }
 .ChoiceBtnActive{
@@ -269,11 +280,14 @@
     font-size: 1.5vw;
 }
 
+
 @keyframes eject-card {
     0%{
+        left: 65.5%;
+        bottom: 1%;
     }
     100%{
-        left: 110vw;
+        left: 120vw;
     }
 }
 
@@ -324,7 +338,7 @@
 
 @keyframes set-opponent-card {
     0%{
-        transform: translateZ(10vw);
+        transform: translateZ(11vw);
   
 
     }
@@ -341,7 +355,7 @@
     }
     100%{
 
-        left: 66.4%;
+        left: 65.5%;
         top: 1%;
     }
 }
@@ -370,3 +384,43 @@
     margin-right: -11vw;
 }
 
+/*----------------------------------Mobile----------------------------------------*/
+@media screen and (max-width: 1000px){
+
+    .StickMenu{
+
+        top:5vh;
+        bottom: 5vh;
+        left: 15vw;
+        right: 15vw;
+    }
+
+    .DivStickMenu img{
+        height: 15vw;
+    }
+    .DivStickMenu h4{
+        font-size: 1.6vw;
+        color: white;
+        text-shadow: 5px 3px 5px #000;
+    }
+    
+    .BtnDefault{
+
+        font-size: 2vw;
+        padding: 0.6vw;
+        font-family: 'Naruto';
+        background-color: var(--narutoOrange);
+        box-shadow: 1px 1px 20px rgb(0, 0, 0);
+        text-decoration: none;
+        color: black;
+    }
+    
+    .BtnDefault:hover{
+        cursor:pointer;
+        box-shadow: 4px 4px 20px rgb(0, 0, 0);
+        transform: scale(1.1);
+    }
+    
+
+
+}

@@ -5,16 +5,18 @@ import naruto1 from './../../images/Naruto1.png';
 import alvoKunai from './../../images/AlvoKunai.png';
 import {Link} from 'react-router-dom';
 
+
 function Home() {
   return (
     <main>
+      
       <Header></Header>
       <container className='MainHome'>
         <div className='DivLeftHome'>
           <ul className='MenuOptions'>
             <Link className='NoUnderline'><li><img alt='kunai' src={kunai} /><p>Instrucoes</p></li></Link>
             <Link className='NoUnderline' to='/cards'><li><img alt='kunai' src={kunai} /><p>Cartas</p></li></Link>
-            <Link className='NoUnderline'><li><img alt='kunai' src={kunai} /><p>contato</p></li></Link>
+            <Link className='NoUnderline' to='https://lucaseneas.github.io/meu-portifolio/'><li><img alt='kunai' src={kunai} /><p>contato</p></li></Link>
           </ul>
         </div>
         <div className='DivCenterHome'>

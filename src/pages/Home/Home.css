@@ -2,12 +2,13 @@
     display: flex;
 }
 
+
 /*-----------------Left----------------*/
 .DivLeftHome {
     width: 33.3333%;
 }
 
-.NoUnderline{
+.NoUnderline {
     text-decoration: none;
     color: black;
 }
@@ -15,7 +16,7 @@
 .MenuOptions li {
     display: flex;
     align-items: center;
-    
+
 }
 
 .MenuOptions li:hover {
@@ -23,50 +24,76 @@
 }
 
 .MenuOptions img {
-   height: 2vw;
+    height: 2vw;
 }
 
-.MenuOptions p{
-    font-size: 1vw;
+.MenuOptions p {
+    -webkit-text-stroke-width: 0.5px;
+    /* largura da borda */
+    -webkit-text-stroke-color: #ffffff;
+    font-size: 1.5vw;
     cursor: pointer;
 }
+
 /*-----------------Center----------------*/
 .DivCenterHome {
     width: 33.3333%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
 
-.DivCenterHome button{
+.DivCenterHome button {
     width: 25vw;
     height: 4vw;
     border-radius: 40px;
     font-size: 3vw;
+    color: black;
     font-family: 'Naruto';
     background-color: var(--narutoOrange);
-    margin-top: -2vw ;
-    box-shadow: 1px 1px 20px rgb(0, 0, 0) ;
+    margin-top: -2vw;
+    border: none;
+    box-shadow: 1px 1px 20px rgb(0, 0, 0);
+    position: relative;
+    bottom: 5vh;
 }
 
-.DivCenterHome button:hover{
+.DivCenterHome button:hover {
     transform: scale(1.1);
-    box-shadow: 3px 3px 30px rgb(0, 0, 0) ;
+    box-shadow: 3px 3px 30px rgb(0, 0, 0);
     cursor: pointer;
 }
 
-.DivCenterHome img{
+.DivCenterHome img {
     width: 28vw;
 }
+
 /*-----------------Right----------------*/
 .DivRightHome {
     width: 33.3333%;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end ;
+    align-items: flex-end;
 }
 
-.DivRightHome img{
+.DivRightHome img {
     height: 12vw;
+}
+
+/*-------------------------------------------Mobile--------------------------------------------*/
+
+@media screen and (max-width: 1000px){
+
+    .DivCenterHome button {
+        position: relative;
+        bottom: 15vh;
+       
+    }
+    .DivRightHome img {
+        position: relative;
+        bottom: 6vw;
+        height: 12vw;
+    }
+
 }

@@ -1,9 +1,16 @@
 body {
   margin: 0;
+
   font-family: Naruto, serif;
-  background: var(--gradient) no-repeat;
+  
+  /*background: var(--gradient) no-repeat;*/
+  background: url("./images/BackGroundPage.jpg") no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-position: left;
+
+
+  background-color: #355c41;
+
   overflow: hidden;
   
   /*
@@ -28,6 +35,8 @@ body {
 @font-face {
   font-family: 'Naruto';
   src: local('Naruto'), url(./font/njnaruto.ttf) format('truetype');
+  -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff;
 }
 
 code {

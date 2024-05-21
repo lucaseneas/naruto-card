@@ -107,6 +107,7 @@ function Game() {
 
     return (
         <main className="MainGame">
+
             <div className="StickMenu" id="StickMenu">
                 <div className="DivStickMenu">
                     <img id='ImgWinOrLose' src='./'></img>
@@ -114,17 +115,16 @@ function Game() {
                     <a href='./' className="BtnDefault">Voltar</a>
                     <a href='./game' className="BtnDefault">Jogar Novamente</a>
                 </div>
-                    
-                
-                
             </div>
+
             <div className="DivLeftGame">
-                <div>
+                <div className='DivPoints'>
                     <p>Oponente</p>
                     <p id='OpponentPoint'>0</p>
                 </div>
                 <img src={backgroundSasuke} alt='sasuke'></img>
             </div>
+
             <div className="DivCenterGame">
                 <div className="DivOpponent">
                     {getOpponentCards()}
@@ -132,24 +132,22 @@ function Game() {
                 <div className="DivMiddleGame">
                     <button id='SelectBtn' onClick={start} className="ChoiceBtn">Escolher</button>
                     <div id='DivJutsu' className="DivJutsu">
-                        <img id='ImgJutsu' src={selo} alt='type jutsu' />
+                        <img className="ImgJutsu" id='ImgJutsu' src={selo} alt='type jutsu' />
                         <p id='PJutsu'>Escolha sua carta</p>
                     </div>
                 </div>
-
                 <div className='DivMyCards'>
                     {getMyCards()}
                 </div>
-
             </div>
+
             <div className="DivRightGame">
-                <div>
+                <div className='DivPoints'>
                     <p>voce</p>
                     <p id='MyPoint'>0</p>
                 </div>
                 <img src={backgroundNaruto} alt='naruto'></img>
             </div>
-
         </main >
 
     )

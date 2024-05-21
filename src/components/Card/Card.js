@@ -38,11 +38,11 @@ function Card(props) {
     return (
         <div id='TestCard'>
             <div className='NarutoCard'>
+                <h2 id='CardName' className='CardTitle'>{props.name}</h2>
                 <div className='ImgCardDiv'>
                     <img className='ImgCard' src={props.image}></img>
                 </div>
                 <div className='CardInfo'>
-                    <h2 id='CardName' className='CardTitle'>{props.name}</h2>
                     <p id='NinjutsuInfo' className='Info'>Ninjutsu<img src={ninjutsu} alt='ninjutsu' /><p id='NinjutsuStatus'>{props.ninjutsu}</p></p>
                     <p id='TaijutsuInfo' className='Info'>Taijutsu<img src={taijutsu} alt='taijutsu' /><p id='TaijutsuStatus'>{props.taijutsu}</p> </p>
                     <p id='GenjutsuInfo' className='Info'>Genjutsu<img src={genjutsu} alt='genjutsu' /><p id='GenjutsuStatus'>{props.genjutsu}</p> </p>
