@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/naruto-card/static/css/main.62ff85fb.css",
-    "main.js": "/naruto-card/static/js/main.b0faf8eb.js",
+    "main.js": "/naruto-card/static/js/main.27075061.js",
     "static/media/ImgDraw.png": "/naruto-card/static/media/ImgDraw.ddd784d2e4892c53d4c6.png",
     "static/media/Naruto1.png": "/naruto-card/static/media/Naruto1.dcb4d82cefc09ea0a34a.png",
     "static/media/BackgroundCard.png": "/naruto-card/static/media/BackgroundCard.9f153b130a68db95af55.png",
@@ -29,10 +29,10 @@
     "static/media/Arrow.svg": "/naruto-card/static/media/Arrow.0178155dc890b24362dfd999233f78c0.svg",
     "index.html": "/naruto-card/index.html",
     "main.62ff85fb.css.map": "/naruto-card/static/css/main.62ff85fb.css.map",
-    "main.b0faf8eb.js.map": "/naruto-card/static/js/main.b0faf8eb.js.map"
+    "main.27075061.js.map": "/naruto-card/static/js/main.27075061.js.map"
   },
   "entrypoints": [
     "static/css/main.62ff85fb.css",
-    "static/js/main.b0faf8eb.js"
+    "static/js/main.27075061.js"
   ]
 }
