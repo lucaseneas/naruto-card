@@ -14,7 +14,18 @@ import selo from './../../images/Selo.gif';
 var myRoundPoint = 0;
 var opponentRoundPoint = 0;
 var roundCount = 0;
-var point
+
+window.moveTo = function() {
+    console.log("blur")
+}
+
+export function clearAllData(){
+    myRoundPoint = 0;
+    opponentRoundPoint = 0;
+    roundCount = 0
+    
+    
+}
 
 export function getRandomNumber(res) {
     return Math.floor(Math.random() * res);
@@ -50,11 +61,16 @@ function ejectCard(){
 
 //Funcção principal do botão "Escolher"
 export function start(){
+    try{
         roundCount += 1;
         disableSelectButton(true); //Desabilita o botão
         round(roundCount); //Inicia o round
-        setTimeout(clean,9000,roundCount); //Deixa as escritas do proximo round pronto
-        setTimeout(disableSelectButton,11000,false);//Habilita o botão
+
+        
+        const timeout1 = setTimeout(clean,9000,roundCount); //Deixa as escritas do proximo round pronto
+        const timeout2 = setTimeout(disableSelectButton,11000,false);//Habilita o botão
+        timeout1();
+        timeout2();
         
         if(roundCount >= 3){
             setTimeout(console.log,9000,'finish');
@@ -62,6 +78,9 @@ export function start(){
             setTimeout(verifyWhoWon,9000); 
             roundCount = 0;
         }
+    }catch(e){
+        console.log(e)
+    }
 }
 
 function changeStickMenuData(data){ 

@@ -87,13 +87,16 @@
 
     .DivCenterHome button {
         position: relative;
-        bottom: 15vh;
+        bottom: 17vh;
        
     }
     .DivRightHome img {
         position: relative;
-        bottom: 6vw;
+        bottom: 10vh;
         height: 12vw;
+    }
+    .DivCenterHome img {
+        width: 60vh;
     }
 
 }

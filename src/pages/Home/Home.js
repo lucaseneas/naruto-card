@@ -4,6 +4,7 @@ import kunai from './../../images/Kunai.png';
 import naruto1 from './../../images/Naruto1.png';
 import alvoKunai from './../../images/AlvoKunai.png';
 import {Link} from 'react-router-dom';
+import { clearAllData } from './../Game/Rules.js';
 
 
 function Home() {
@@ -21,7 +22,7 @@ function Home() {
         </div>
         <div className='DivCenterHome'>
           <img src={naruto1}></img>
-          <Link to='./game'><button>Play</button></Link>
+          <Link to='./game'><button onClick={clearAllData}>Play</button></Link>
           
         </div>
         <div className='DivRightHome'>

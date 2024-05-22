@@ -5,9 +5,10 @@ body {
   
   /*background: var(--gradient) no-repeat;*/
   background: url("./images/BackGroundPage.jpg") no-repeat;
-  background-size: cover;
+  
   background-position: center;
-
+  background-size: cover;
+  
   background-color: #355c41;
 
   overflow: hidden;
