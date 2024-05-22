@@ -14,30 +14,21 @@ import selo from './../../images/Selo.gif';
 var myRoundPoint = 0;
 var opponentRoundPoint = 0;
 var roundCount = 0;
+var timeouts = [];
 
-window.moveTo = function() {
-    console.log("blur")
-}
-
-export function clearAllData(){
-    myRoundPoint = 0;
-    opponentRoundPoint = 0;
-    roundCount = 0
-    
-    
-}
-
+//Cria um numero aleatorio
 export function getRandomNumber(res) {
     return Math.floor(Math.random() * res);
 }
 
+//Carrega os JSON
 export async function getData() {
     const response = await fetch('data.json');
     const fetchedData = await response.json();
     console.log(fetchedData);
-    // Aqui você pode usar fetchedData console.log(fetchedData);
     return fetchedData;
 }
+
 export function selectOpponentCard(count) {
     const selectOpponentMove = document.getElementById('OpponentCard'+count);
     selectOpponentMove.classList.add('opponentCardSelect');
@@ -59,28 +50,44 @@ function ejectCard(){
     myCard.classList.add('ejectCard')
 }
 
-//Funcção principal do botão "Escolher"
+//Limpa e cancela todos os dados e funções quando clica em retornar
+window.addEventListener('popstate', function(event) {
+    myRoundPoint = 0;
+    opponentRoundPoint = 0;
+    roundCount = 0
+    cancelTimeouts();
+});
+
+function createTimeOut(functions,time,data){
+    var timeoutId = setTimeout(functions,time,data);
+    timeouts.push(timeoutId);
+}
+
+function cancelTimeouts() {
+    timeouts.forEach(function(timeoutId) {
+        clearTimeout(timeoutId); // Cancelar o timeout
+    });
+    
+    // Limpar o array depois de cancelar todos os timeouts
+    timeouts = [];
+}
+
+
+//Função principal do botão "Escolher"
 export function start(){
-    try{
         roundCount += 1;
         disableSelectButton(true); //Desabilita o botão
         round(roundCount); //Inicia o round
 
-        
-        const timeout1 = setTimeout(clean,9000,roundCount); //Deixa as escritas do proximo round pronto
-        const timeout2 = setTimeout(disableSelectButton,11000,false);//Habilita o botão
-        timeout1();
-        timeout2();
-        
+        createTimeOut(clean,9000,roundCount);//Deixa as escritas do proximo round pronto
+        createTimeOut(disableSelectButton,11000,false);//Habilita o botão
+       
         if(roundCount >= 3){
-            setTimeout(console.log,9000,'finish');
-            setTimeout(activeStickMenu,9000);
-            setTimeout(verifyWhoWon,9000); 
+            createTimeOut(activeStickMenu,9000);
+            createTimeOut(verifyWhoWon,9000);
             roundCount = 0;
         }
-    }catch(e){
-        console.log(e)
-    }
+
 }
 
 function changeStickMenuData(data){ 
@@ -110,15 +117,16 @@ function round(count){
     activeGif();
     selectOpponentCard(count);
     removeSelectButton();
-    setTimeout(getTypeJutsu, 4000);
-    setTimeout(verifyWhoWonRound, 6000);
-    setTimeout(ejectCard, 9000);
+    
+    createTimeOut(getTypeJutsu,4000);
+    createTimeOut(verifyWhoWonRound,6000);
+    createTimeOut(ejectCard,9000);
 }
 
 function clean(count){
     count += 1;
     changeGif("Round "+ count);
-    setTimeout(changeGif, 2000,"Selecione sua carta");
+    createTimeOut(changeGif,2000,"Selecione sua carta");
 }
 
 function disableSelectButton(condition){
@@ -133,7 +141,7 @@ function disableSelectButton(condition){
     dsbCard3.disabled = condition;
 }
 
-export function verifyWhoWon(){ //---------------------------------------ARRUMAR
+export function verifyWhoWon(){ 
     const myPoint = document.querySelector('#MyPoint');
     const opponentPoint = document.querySelector('#OpponentPoint');
     console.log(myPoint.innerHTML)
@@ -169,8 +177,6 @@ export function verifyWhoWonRound() {
         console.log("Meus Pontos" + myRoundPoint);
         attPoints();
         changeGif("Voce ganhou");
-        //myCardSelected.classList.remove("SelectCard");
-        //myCardSelected.classList.add("winner-my");
     }
     else if (myJutsuElementText === opponentJutsuElementText) {
         console.log("Empate");
