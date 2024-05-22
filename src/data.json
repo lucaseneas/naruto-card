@@ -1,0 +1,225 @@
+[
+    {
+        "id": "1",
+        "name": "Naruto Uzumaki",
+        "ninjutsu": "9",
+        "genjutsu": "2",
+        "taijutsu": "8",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/7/7d/Naruto_Part_II.png"
+    },
+    {
+        "id": "2",
+        "name": "Itachi Uchiha",
+        "ninjutsu": "10",
+        "genjutsu": "9",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/bb/Itachi.png"
+    },
+    {
+        "id": "3",
+        "name": "Sasuke Uchiha",
+        "ninjutsu": "10",
+        "genjutsu": "7",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/1/13/Sasuke_Part_2.png"
+    },
+    {
+        "id": "4",
+        "name": "Kakashi Hatake",
+        "ninjutsu": "8",
+        "genjutsu": "6",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/2/25/Kakashi_Part_III.png"
+    },
+    {
+        "id": "5",
+        "name": "Madara Uchiha",
+        "ninjutsu": "10",
+        "genjutsu": "9",
+        "taijutsu": "8",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/f/fd/Madara.png"
+    },
+    {
+        "id": "6",
+        "name": "Sakura Haruno",
+        "ninjutsu": "4",
+        "genjutsu": "3",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/ba/Sakurap2.png"
+    },
+    {
+        "id": "7",
+        "name": "Shikamaru Nara",
+        "ninjutsu": "6",
+        "genjutsu": "4",
+        "taijutsu": "5",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/9/9a/Shikamaru_Nara.png"
+    },
+    {
+        "id": "8",
+        "name": "Hinata Hyuga",
+        "ninjutsu": "5",
+        "genjutsu": "4",
+        "taijutsu": "8",
+        "imageUrl": "https://i.pinimg.com/originals/a3/68/20/a368208b4cc8bfd29a94b6ef9cf4c0af.jpg"
+    },
+    {
+        "id": "9",
+        "name": "Rock Lee",
+        "ninjutsu": "3",
+        "genjutsu": "2",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/7/7d/Lee_timeskip.png"
+    },
+    {
+        "id": "10",
+        "name": "Neji Hyuga",
+        "ninjutsu": "5",
+        "genjutsu": "3",
+        "taijutsu": "8",
+        "imageUrl": "https://i.pinimg.com/originals/50/41/56/50415619a4b5d41868f37579e67e1d55.jpg"
+    },
+    {
+        "id": "11",
+        "name": "Tenten",
+        "ninjutsu": "4",
+        "genjutsu": "2",
+        "taijutsu": "6",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/0/02/Tenten_Part_II.png"
+    },
+    {
+        "id": "12",
+        "name": "Ino Yamanaka",
+        "ninjutsu": "5",
+        "genjutsu": "3",
+        "taijutsu": "5",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/8/89/Ino2.png"
+    },
+    {
+        "id": "13",
+        "name": "Choji Akimichi",
+        "ninjutsu": "4",
+        "genjutsu": "2",
+        "taijutsu": "6",
+        "imageUrl": "https://i.pinimg.com/originals/16/4a/d6/164ad6c15068838f3df898ed9f1b9678.jpg"
+    },
+    {
+        "id": "14",
+        "name": "Kiba Inuzuka",
+        "ninjutsu": "5",
+        "genjutsu": "2",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/c/cb/Kiba_Part_2.png"
+    },
+    {
+        "id": "15",
+        "name": "Shino Aburame",
+        "ninjutsu": "6",
+        "genjutsu": "3",
+        "taijutsu": "6",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/e/e1/Shino_Aburame_P2.png"
+    },
+    {
+        "id": "16",
+        "name": "Temari",
+        "ninjutsu": "6",
+        "genjutsu": "3",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/b2/Temari_Part_II.png"
+    },
+    {
+        "id": "17",
+        "name": "Kankuro",
+        "ninjutsu": "6",
+        "genjutsu": "3",
+        "taijutsu": "7",
+        "imageUrl": "https://i.pinimg.com/originals/1e/c7/14/1ec71406fa3480dd24b97975154ab4a7.jpg"
+    },
+    {
+        "id": "18",
+        "name": "Gaara",
+        "ninjutsu": "8",
+        "genjutsu": "4",
+        "taijutsu": "7",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/0/0f/Gaara_Part_II.png"
+    },
+    {
+        "id": "19",
+        "name": "Jiraiya",
+        "ninjutsu": "9",
+        "genjutsu": "7",
+        "taijutsu": "8",
+        "imageUrl": "https://i.pinimg.com/originals/26/4b/2f/264b2f4eb28380339a65cc2afe1f2040.jpg"
+    },
+    {
+        "id": "20",
+        "name": "Tsunade",
+        "ninjutsu": "7",
+        "genjutsu": "6",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png"
+    },{
+        "id": "21",
+        "name": "Orochimaru",
+        "ninjutsu": "10",
+        "genjutsu": "9",
+        "taijutsu": "6",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/be/Orochimaru_Part_III.png"
+    },
+    {
+        "id": "22",
+        "name": "Tobirama Senju",
+        "ninjutsu": "9",
+        "genjutsu": "5",
+        "taijutsu": "8",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/be/Tobirama_Senju.png"
+    },
+    {
+        "id": "23",
+        "name": "Hashirama Senju",
+        "ninjutsu": "10",
+        "genjutsu": "6",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/7/7e/Hashirama_Senju.png"
+    },
+    {
+        "id": "24",
+        "name": "Minato Namikaze",
+        "ninjutsu": "10",
+        "genjutsu": "7",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/7/71/Minato_Namikaze.png"
+    },
+    {
+        "id": "25",
+        "name": "Killer B",
+        "ninjutsu": "9",
+        "genjutsu": "3",
+        "taijutsu": "9",
+        "imageUrl": "https://i.pinimg.com/originals/34/e2/9c/34e29ce25da03404d673999effebff52.jpg"
+    },
+    {
+        "id": "26",
+        "name": "Guy",
+        "ninjutsu": "5",
+        "genjutsu": "3",
+        "taijutsu": "10",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/3/31/Might_Guy.png"
+    },
+    {
+        "id": "27",
+        "name": "Tsunade",
+        "ninjutsu": "7",
+        "genjutsu": "6",
+        "taijutsu": "9",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/b/b3/Tsunade_infobox2.png"
+    },
+    {
+        "id": "28",
+        "name": "Tenten",
+        "ninjutsu": "5",
+        "genjutsu": "3",
+        "taijutsu": "6",
+        "imageUrl": "https://static.wikia.nocookie.net/naruto/images/0/02/Tenten_Part_II.png"
+    }
+]

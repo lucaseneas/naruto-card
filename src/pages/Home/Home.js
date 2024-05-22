@@ -15,13 +15,13 @@ function Home() {
         <div className='DivLeftHome'>
           <ul className='MenuOptions'>
             <Link className='NoUnderline'><li><img alt='kunai' src={kunai} /><p>Instrucoes</p></li></Link>
-            <Link className='NoUnderline' to='/cards'><li><img alt='kunai' src={kunai} /><p>Cartas</p></li></Link>
+            <Link className='NoUnderline' to='./cards'><li><img alt='kunai' src={kunai} /><p>Cartas</p></li></Link>
             <Link className='NoUnderline' to='https://lucaseneas.github.io/meu-portifolio/'><li><img alt='kunai' src={kunai} /><p>contato</p></li></Link>
           </ul>
         </div>
         <div className='DivCenterHome'>
           <img src={naruto1}></img>
-          <Link to='/game'><button>Play</button></Link>
+          <Link to='./game'><button>Play</button></Link>
           
         </div>
         <div className='DivRightHome'>

@@ -6,8 +6,7 @@ body {
   /*background: var(--gradient) no-repeat;*/
   background: url("./images/BackGroundPage.jpg") no-repeat;
   background-size: cover;
-  background-position: left;
-
+  background-position: center;
 
   background-color: #355c41;
 

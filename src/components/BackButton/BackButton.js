@@ -4,7 +4,7 @@ import arrow from './../../images/Arrow.svg';
 
 function BackButton() {
     return (
-        <Link to='../'>
+        <Link to='../naruto-card'>
             <button className="BackButton">
                 <img className='BackButtonImg' src={arrow}></img>
             </button>

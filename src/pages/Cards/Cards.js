@@ -4,6 +4,7 @@ import React, { ReactDOM, useEffect, useState } from 'react';
 import BackButton from '../../components/BackButton/BackButton';
 
 
+
 function Cards() {
 
     const [cards, setCards] = useState([])
@@ -27,7 +28,6 @@ function Cards() {
             <BackButton></BackButton>
             <h1>Cartas</h1>
             <div className='DivShowCard'>
-                {console.log("teste")}
                 {cards.length > 0 ? (
                     cards.map((response) => (
                         <div className='DivInternalShowCard'>

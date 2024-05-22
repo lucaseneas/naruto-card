@@ -8,9 +8,9 @@ import Cards from './pages/Cards/Cards';
 export default () => {
     return (
             <Routes>
-                <Route exact path='/' element={<Home/>}/>
-                <Route exact path='/game' element={<Game/>}/>
-                <Route exact path='/cards' element={<Cards/>}/>
+                <Route exact path='/naruto-card' element={<Home/>}/>
+                <Route exact path='/naruto-card/game' element={<Game/>}/>
+                <Route exact path='/naruto-card/cards' element={<Cards/>}/>
             </Routes>
     );
 }
