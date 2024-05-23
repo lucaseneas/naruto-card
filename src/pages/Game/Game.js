@@ -131,10 +131,13 @@ function Game() {
                 </div>
                 <div className="DivMiddleGame">
                     <button id='SelectBtn' onClick={start} className="ChoiceBtn">Escolher</button>
-                    <div id='DivJutsu' className="DivJutsu">
-                        <img className="ImgJutsu" id='ImgJutsu' src={selo} alt='type jutsu' />
-                        <p id='PJutsu'>Escolha sua carta</p>
+                    <div className="DivJutsuOut">
+                        <div id='DivJutsu' className="DivJutsu">
+                            <img className="ImgJutsu" id='ImgJutsu' src={selo} alt='type jutsu' />
+                            <p id='PJutsu'>Escolha sua carta</p>
+                        </div>
                     </div>
+                    
                 </div>
                 <div className='DivMyCards'>
                     {getMyCards()}
