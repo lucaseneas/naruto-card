@@ -83,20 +83,48 @@
 
 /*-------------------------------------------Mobile--------------------------------------------*/
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 600px){
+
+    .MainHome {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .DivLeftHome {
+        width: 100vw;
+        height: 20vh;
+        
+    }
+    .MenuOptions{
+        
+    }
+    .MenuOptions li {
+        margin-bottom: -3vh;
+    
+    }
+    
+    .MenuOptions img {
+        height: 5vw;
+    }
+    .MenuOptions p {
+
+        font-size: 2.7vh;
+    }
 
     .DivCenterHome button {
+        width: 80vw;
+        height: 15vw;
+        font-size: 12vw;
         position: relative;
-        bottom: 17vh;
-       
+        bottom: 15vh;
     }
     .DivRightHome img {
-        position: relative;
-        bottom: 10vh;
-        height: 12vw;
+        display: none;
     }
     .DivCenterHome img {
-        width: 60vh;
+        width: 400px;
     }
 
 }

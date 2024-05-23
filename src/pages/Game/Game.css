@@ -74,7 +74,9 @@
     margin-left: -10vw;
 }
 
-.DivPoints {
+
+
+.DivPointsLeft {
     background-image: url(./../../images/ScrollBackground.jpg);
     background-color: rgb(225, 219, 179);
     border-radius: 20px;
@@ -397,6 +399,7 @@
     }
 }
 
+/*---------------------- Right ------------------------------*/
 .DivRightGame {
     width: 20%;
     display: flex;
@@ -410,67 +413,312 @@
     margin-right: -11vw;
 }
 
+.DivPointsRight {
+    background-image: url(./../../images/ScrollBackground.jpg);
+    background-color: rgb(225, 219, 179);
+    border-radius: 20px;
+    border: solid 4px #D6B136;
+    width: 8em;
+    height: 6em;
+    text-align: center;
+}
+
 /*----------------------------------Mobile----------------------------------------*/
 @media screen and (max-width: 1000px) {
 
-    /*-------------Left Game--------------*/
+            .MainGame {
+                display: flex;
+                flex-direction: column;
 
-    .DivLeftGame img {
-        height: 66vh;
-    }
+            }
 
-    .DivPoints {
-        width: 15vw;
-        height: 27vh;
-    }
-    /*--------------------------*/
-    .StickMenu {
+            /*-------------Left Game--------------*/
+            .DivLeftGame {
+                width: 100%;
+                height: 15vh;
+                display: flex;
+                align-items: end;
+            }
 
-        top: 5vh;
-        bottom: 5vh;
-        left: 15vw;
-        right: 15vw;
-    }
+            .DivLeftGame img {
+                display: none;
+            }
 
-    .DivStickMenu img {
-        height: 15vw;
-    }
+            .DivPointsLeft {
+                background-image: url(./../../images/ScrollBackground.jpg);
+                background-color: rgb(225, 219, 179);
+                border-radius: 20px;
+                border: solid 4px #D6B136;
+                width: 20vw;
+                height: 10vh;
+                text-align: center;
+            }
 
-    .DivStickMenu h4 {
-        font-size: 1.6vw;
-        color: white;
-        text-shadow: 5px 3px 5px #000;
-    }
+            /*-------------Center Game--------------*/
+            .DivCenterGame {
+                width: 100%;
+            }
 
-    .BtnDefault {
+            .DivOpponent {
+                height: 100%;
+                display: flex;
+            }
 
-        font-size: 2vw;
-        padding: 0.6vw;
-        font-family: 'Naruto';
-        background-color: var(--narutoOrange);
-        box-shadow: 1px 1px 20px rgb(0, 0, 0);
-        text-decoration: none;
-        color: black;
-    }
+            .OpponentCard1 {
+                position: absolute;
+                height: 190px;
 
-    .BtnDefault:hover {
-        cursor: pointer;
-        box-shadow: 4px 4px 20px rgb(0, 0, 0);
-        transform: scale(1.1);
-    }
-    /*-------------Right Game--------------*/
+                top: 1vw;
+                left: 26%;
+            }
 
-    .DivRightGame {
-        width: 20%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .DivRightGame img {
-        height: 66vh;
-        margin-right: -11vw;
-    }
+            .OpponentCard2 {
+                position: absolute;
+                height: 190px;
+                top: 1vw;
+                left: 23%;
+            }
+
+            .OpponentCard3 {
+                height: 190px;
+                position: absolute;
+                top: 1vw;
+                left: 20%;
+            }
+
+            /*----------Opponent Card FLip-------------*/
+            .card {
+                width: 125px;
+                height: 190px;
+            }
+
+            .front-card img {
+                width: 125px;
+                height: 190px;
+            }
+
+            /*-----------------------*/
+
+            .DivMiddleGame {
+                height: 70vh;
+            }
+
+            .DivMyCards {
+
+                height: 0vh;
+            }
+
+            .MyCard1 {
+                position: absolute;
+                left: 20%;
+                bottom: 10vh;
+                background-color: #0099cc00
+            }
+
+            .MyCard2 {
+                position: absolute;
+                left: 23%;
+                bottom: 10vh;
+                background-color: #0099cc00
+            }
+
+            .MyCard3 {
+                position: absolute;
+                left: 26%;
+                bottom: 10vh;
+                background-color: #0099cc00
+            }
+
+            /*--------- parei aqui ---------*/
+            .MyCard1,
+            .MyCard2,
+            .MyCard3,
+            :disabled {
+                color: black;
+                font-family: Naruto, serif;
+                padding: 0px;
+            }
+
+
+            .BtnMyCard {
+                width: 125px;
+                height: 190px;
+            }
+
+
+            .ChoiceBtn {
+                position: absolute;
+                top: 82%;
+                left: 45%;
+                width: 15vw;
+                height: 3vw;
+                border-radius: 40px;
+                font-size: 2vw;
+                font-family: 'Naruto';
+                background-color: #5c5b5bc2;
+                cursor: default;
+                display: none;
+                border: none;
+                color: black;
+
+            }
+
+            .ChoiceBtnActive {
+                background-color: var(--narutoOrange);
+                cursor: pointer;
+                box-shadow: 1px 1px 20px rgb(0, 0, 0);
+                display: block;
+            }
+
+            .ChoiceBtnActive:hover {
+                background-color: var(--narutoOrange);
+                cursor: pointer;
+                box-shadow: 4px 4px 20px rgb(0, 0, 0);
+                transform: scale(1.1);
+            }
+
+            .DivJutsu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: 50%;
+                left: 45%;
+                height: 8vw;
+            }
+
+            .DivJutsu img {
+                height: 80%;
+                display: none;
+            }
+
+            .Active {
+                display: block;
+            }
+
+            .DivJutsu p {
+                font-size: 1.5vw;
+            }
+
+
+            @keyframes eject-card {
+                0% {
+                    left: 65.5%;
+                    bottom: 1%;
+                }
+
+                100% {
+                    left: 120vw;
+                }
+            }
+
+            @keyframes animationWinner-my {
+                0% {
+                    left: 65.7%;
+                    bottom: 1%;
+
+                }
+
+                100% {
+                    left: 45%;
+                    bottom: 20%;
+
+                }
+            }
+
+            @keyframes animationWinner-opponent {
+                0% {
+                    left: 65.7%;
+                    bottom: 1%;
+
+                }
+
+                100% {
+                    left: 45%;
+                    bottom: 20%;
+
+                }
+            }
+
+            @keyframes set-my-card {
+                0% {
+                    /*
+                transform: transitionX();
+                position: absolute;
+                */
+
+
+                }
+
+                100% {
+                    /*
+                transform: translateX(30vw) translateY(-8vw);
+            */
+
+                    left: 65vw;
+                    bottom: 25vh;
+                }
+            }
+
+            @keyframes set-opponent-card {
+                0% {
+                    transform: translateZ(11vw);
+
+
+                }
+
+                100% {
+                    transform: rotateY(180deg);
+
+                }
+            }
+
+
+
+            @keyframes move-opponent-card {
+                0% {}
+
+                100% {
+
+                    left: 65.5%;
+                    top: 1%;
+                }
+            }
+
+
+            @keyframes go-up {
+                0% {
+                    transform: translateY(0vh);
+                }
+
+                100% {
+                    transform: translateY(-7vw);
+                    z-index: 20;
+                }
+            }
+
+            .DivRightGame {
+                width: 100%;
+                height: 15vh;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                justify-content: center;
+            }
+
+            .DivRightGame img {
+                display: none;
+            }
+
+            .DivPointsRight {
+                background-image: url(./../../images/ScrollBackground.jpg);
+                background-color: rgb(225, 219, 179);
+                border-radius: 20px;
+                border: solid 4px #D6B136;
+                width: 20vw;
+                height: 10vh;
+                text-align: center;
+            }
 
 }

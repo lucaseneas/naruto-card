@@ -10,7 +10,6 @@ import { clearAllData } from './../Game/Rules.js';
 function Home() {
   return (
     <main>
-      
       <Header></Header>
       <container className='MainHome'>
         <div className='DivLeftHome'>

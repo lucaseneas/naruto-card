@@ -54,3 +54,33 @@
 .Info img{
     height: 1.2vw;
 }
+
+@media screen and (max-width: 1000px) {
+    .NarutoCard{
+        width: 125px;
+        height: 190px;
+    }
+    .CardTitle{
+        position: relative;
+        top:2%;
+        font-size: 10px;
+        text-align: center;
+    }
+    
+    .ImgCardDiv{
+        top:-2.5%;
+        left: 1%;
+        width: 98%;
+    }
+
+    .Info{
+        font-size: 1.8vw;
+        margin-top: -2vw;
+        margin-bottom: -1vw;
+        
+    }
+    .Info img{
+        height: 2.8vw;
+    }
+    
+}

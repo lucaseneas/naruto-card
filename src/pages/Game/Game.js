@@ -118,7 +118,7 @@ function Game() {
             </div>
 
             <div className="DivLeftGame">
-                <div className='DivPoints'>
+                <div className='DivPointsLeft'>
                     <p>Oponente</p>
                     <p id='OpponentPoint'>0</p>
                 </div>
@@ -142,7 +142,7 @@ function Game() {
             </div>
 
             <div className="DivRightGame">
-                <div className='DivPoints'>
+                <div className='DivPointsRight'>
                     <p>voce</p>
                     <p id='MyPoint'>0</p>
                 </div>
