@@ -1,13 +1,14 @@
 .BackButton{
     background-color: var(--narutoOrange);
     position: absolute;
-    top: 3%;
-    right: 3%;
+    top: 2vh;
+    right: 2vw;
     padding: 1%;
     border-radius: 50%;
-    width: 5vw;
-    height:5vw;
+    width: 4vw;
+    height:4vw;
     border: none;
+    box-shadow: 2px 2px 8px #000;
     
 }
 .BackButtonImg{
@@ -19,4 +20,19 @@
    transform: scale(1.1);
    cursor: pointer;
    box-shadow: 5px 5px 20px #000;
+}
+
+@media screen and (max-width: 600px) {
+    .BackButton{
+        background-color: var(--narutoOrange);
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        padding: 1%;
+        border-radius: 50%;
+        width: 9vw;
+        height:9vw;
+        border: none;
+    }
+        
 }

@@ -1,4 +1,5 @@
 import Card, { changeBackgroud } from "../../components/Card/Card";
+import BackButton from "../../components/BackButton/BackButton.js"
 import './Game.css';
 import { start, selectMyCard, getRandomNumber, getData, myRoundPoint } from './Rules.js';
 import { useEffect, useState } from 'react';
@@ -107,7 +108,7 @@ function Game() {
 
     return (
         <main className="MainGame">
-
+            <BackButton></BackButton>
             <div className="StickMenu" id="StickMenu">
                 <div className="DivStickMenu">
                     <img id='ImgWinOrLose' src='./'></img>

@@ -63,7 +63,7 @@ function createTimeOut(functions,time,data){
     timeouts.push(timeoutId);
 }
 
-function cancelTimeouts() {
+export function cancelTimeouts() {
     timeouts.forEach(function(timeoutId) {
         clearTimeout(timeoutId); // Cancelar o timeout
     });

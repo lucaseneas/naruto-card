@@ -81,10 +81,15 @@
     background-color: rgb(225, 219, 179);
     border-radius: 20px;
     border: solid 4px #D6B136;
-    width: 8em;
-    height: 6em;
+    width: 7vw;
+    height: 7vw;
     text-align: center;
 }
+
+.DivPointsLeft {
+    font-size: 1.3vw;
+}
+
 
 /*-------------Center Game--------------*/
 .DivCenterGame {
@@ -418,13 +423,16 @@
     background-color: rgb(225, 219, 179);
     border-radius: 20px;
     border: solid 4px #D6B136;
-    width: 8em;
-    height: 6em;
+    width: 7vw;
+    height: 7vw;
     text-align: center;
+}
+.DivPointsRight p{
+    font-size: 1.3vw;
 }
 
 /*----------------------------------Mobile----------------------------------------*/
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
 
             .MainGame {
                 display: flex;
@@ -477,13 +485,17 @@
 
             .DivPointsLeft {
 
-                width: 20vw;
+                width: 25vw;
                 height: 10vh;
                 text-align: center;
 
                 position: absolute;
                 left: 1vw;
                 top: 30vh
+            }
+
+            .DivPointsLeft p{
+                font-size: 90%;
             }
 
             /*-------------Center Game--------------*/
@@ -573,13 +585,13 @@
 
 
             .ChoiceBtn {
-                padding: 1vw;
+                padding: 2vw;
                 top: auto;
                 bottom: 5vh;
                 left: 60vw;
                 width: auto;
                 height: auto;
-                font-size: 5vw;
+                font-size: 100%;
             }
 
             .ChoiceBtnActive {
@@ -738,13 +750,16 @@
             }
 
             .DivPointsRight {
-                width: 20vw;
+                width: 25vw;
                 height: 10vh;
                 
 
                 position: absolute;
                 left: 1vw;
                 top: 55vh
+            }
+            .DivPointsRight p{
+                font-size: 90%;
             }
 
 }

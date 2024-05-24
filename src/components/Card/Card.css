@@ -55,7 +55,7 @@
     height: 1.2vw;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     .NarutoCard{
         width: 125px;
         height: 190px;
