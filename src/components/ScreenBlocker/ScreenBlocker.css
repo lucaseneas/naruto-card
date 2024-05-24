@@ -10,13 +10,14 @@
 }
 .BlockMobile h1{
     position: absolute;
-    top: 45vh;
-    font-size: 10vw;
+    top: 20vh;
+    
+    font-size: 20vh;
     text-align: center;
 
 }
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation:landscape) and (max-width: 600px) {
     .BlockMobile {
         display: block;
     }

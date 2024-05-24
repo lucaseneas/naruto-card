@@ -495,7 +495,7 @@
             }
 
             .DivPointsLeft p{
-                font-size: 90%;
+                font-size: 4vw;
             }
 
             /*-------------Center Game--------------*/
@@ -759,7 +759,7 @@
                 top: 55vh
             }
             .DivPointsRight p{
-                font-size: 90%;
+                font-size: 4vw;
             }
 
 }

@@ -6,7 +6,7 @@ import ScreenBlocker from "./components/ScreenBlocker/ScreenBlocker.js";
 function App() {
   return (
     <BrowserRouter> 
-        
+        <ScreenBlocker></ScreenBlocker>
         <MyRoutes></MyRoutes>
     </BrowserRouter>
 

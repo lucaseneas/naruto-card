@@ -52,9 +52,7 @@ function ejectCard(){
 
 //Limpa e cancela todos os dados e funções quando clica em retornar
 window.addEventListener('popstate', function(event) {
-    myRoundPoint = 0;
-    opponentRoundPoint = 0;
-    roundCount = 0
+    
     cancelTimeouts();
 });
 
@@ -68,6 +66,9 @@ export function cancelTimeouts() {
         clearTimeout(timeoutId); // Cancelar o timeout
     });
     
+    myRoundPoint = 0;
+    opponentRoundPoint = 0;
+    roundCount = 0
     // Limpar o array depois de cancelar todos os timeouts
     timeouts = [];
 }
