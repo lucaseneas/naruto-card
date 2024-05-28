@@ -1,0 +1,79 @@
+.InstructionsMain{
+    height: 100vh;
+}
+
+
+.InstructionsMain h1{
+    -webkit-text-stroke-width: 0.5px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff;
+    font-size: 3vw;
+    margin: 2vh 0vw 0vw 6vw;
+}
+
+.InstructionsDivH2{
+    -webkit-text-stroke-width: 0.1px; /* largura da borda */
+    -webkit-text-stroke-color: #ffffff;
+    font-size: 2em;
+}
+
+.InstructionsDivP{
+    font-size: 1.2em;
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 1.6;
+    
+}
+
+.DivCards{
+    display: flex;
+    justify-content: space-around;
+}
+
+.InstructionsDiv{
+    border-radius: 40px 0px 0px 40px;
+    border: solid 4px #987709;
+    background-image: url(./../../images/ScrollBackground.jpg);
+    background-color: rgb(225, 219, 179);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: 75vh;
+    margin: 3vh 10vw 10vh 10vw;
+    padding: 2%;
+    overflow-y: scroll;
+}
+
+.InstructionsDivImg{
+    width: 3%;
+
+}
+
+/*----------------------------------Mobile----------------------------------------------*/
+@media screen and (max-width: 600px){
+
+    .InstructionsDiv{
+        border-radius: 40px;
+     
+        margin: 3vh 4vw 10vh 4vw;
+
+    }
+
+        .DivCards{
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .InstructionsMain h1{
+            -webkit-text-stroke-width: 0.5px; /* largura da borda */
+            -webkit-text-stroke-color: #ffffff;
+            font-size: 6vw;
+            margin: 4vw;
+        }
+        .InstructionsDivImg{
+            width: 13%;
+        
+        }
+        
+}

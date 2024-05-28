@@ -25,7 +25,6 @@ export function getRandomNumber(res) {
 export async function getData() {
     const response = await fetch('data.json');
     const fetchedData = await response.json();
-    console.log(fetchedData);
     return fetchedData;
 }
 

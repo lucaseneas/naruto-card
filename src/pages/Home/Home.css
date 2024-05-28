@@ -1,5 +1,6 @@
 .MainHome {
     display: flex;
+    height: 100vh;
 }
 
 
@@ -72,12 +73,12 @@
 /*-----------------Right----------------*/
 .DivRightHome {
     width: 33.3333%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+  
 }
-
 .DivRightHome img {
+    position: absolute;
+    right: 2vw;
+    top: 60vh;
     height: 12vw;
 }
 
