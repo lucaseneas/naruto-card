@@ -6,9 +6,6 @@ import ImgWin from './../../images/ImgWin.png';
 import ImgDraw from './../../images/ImgDraw.png';
 import ImgLose from './../../images/ImgLose.png';
 
-import { type } from '@testing-library/user-event/dist/type';
-import Card from "../../components/Card/Card";
-import React, { useEffect, useState } from 'react';
 import selo from './../../images/Selo.gif';
 
 var myRoundPoint = 0;
@@ -240,6 +237,8 @@ export function getTypeJutsu() {
             imgJutsu = genjutsu;
             gifWord.innerHTML = 'Genjutsu';
             break;
+        default:
+            console.log("Erro no switch case função getTypeJutsu")
     }
 
     typeJutsu.src = imgJutsu;

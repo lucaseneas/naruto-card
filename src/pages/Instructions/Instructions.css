@@ -57,10 +57,7 @@
     }
 
     .DivCards{
-        display: flex;
-        justify-content: space-around;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
     }
 
     .InstructionsMain h1{
@@ -71,5 +68,19 @@
         width: 13%;
     
     }
+
+    .InstructionsDivP{
+        font-size: 0.9em;
+        text-indent: 2em;
+        text-align: justify;
+        line-height: 1.6;
         
+    }
+        
+}
+/*----------------------------------Tablet----------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .DivCards{
+        flex-wrap: wrap;
+    }
 }
