@@ -33,6 +33,19 @@
         width: 9vw;
         height:9vw;
         border: none;
-    }
-        
+    } 
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .BackButton{
+        background-color: var(--narutoOrange);
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        padding: 1%;
+        border-radius: 50%;
+        width: 5vw;
+        height:5vw;
+        border: none;
+    } 
 }

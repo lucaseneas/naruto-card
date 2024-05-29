@@ -127,5 +127,49 @@
     .DivCenterHome img {
         width: 400px;
     }
+}
+/*-------------------------------------------Tablet--------------------------------------------*/
+@media screen and (min-width: 600px) and (max-width: 1000px){
 
+    .MainHome {
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+
+    .DivLeftHome {
+        width: 100vw;
+        height: 20vh;
+        
+    }
+    .MenuOptions{
+        
+    }
+    .MenuOptions li {
+        margin-bottom: -3vh;
+    
+    }
+    
+    .MenuOptions img {
+        height: 5vw;
+    }
+    .MenuOptions p {
+
+        font-size: 2.7vh;
+    }
+
+    .DivCenterHome button {
+        width: 70vw;
+        height: 13vw;
+        font-size: 10vw;
+        position: relative;
+        bottom: 15vh;
+    }
+    .DivRightHome img {
+        display: none;
+    }
+    .DivCenterHome img {
+        width: 500px;
+    }
 }
