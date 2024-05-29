@@ -3,7 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 s
 ## Images
-
+![Home](images/view/InGame_Home.png)
 <img src='./../naruto-card/src/images/view/InGame_Home.png'/>
 <img src='./../naruto-card/src/images/view/InGame_Cards.png'/>
 <img src='./../naruto-card/src/images/view/InGame_Game.png'/>
