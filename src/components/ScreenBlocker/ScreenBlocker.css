@@ -12,12 +12,12 @@
     position: absolute;
     top: 20vh;
     
-    font-size: 20vh;
+    font-size: 10vw;
     text-align: center;
 
 }
 
-@media screen and (orientation:landscape) and (max-width: 600px) {
+@media screen and (orientation:landscape) and (max-height: 800px){
     .BlockMobile {
         display: block;
     }
