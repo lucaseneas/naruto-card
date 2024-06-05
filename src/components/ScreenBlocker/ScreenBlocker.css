@@ -17,7 +17,7 @@
 
 }
 
-@media screen and (orientation:landscape) and (max-width: 600px) {
+@media screen and (orientation:landscape) {
     .BlockMobile {
         display: block;
     }
