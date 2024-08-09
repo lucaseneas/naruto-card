@@ -15,7 +15,7 @@ function Home() {
           <ul className='MenuOptions'>
             <Link className='NoUnderline'to='./instructions'><li><img alt='kunai' src={kunai} /><p>Instrucoes</p></li></Link>
             <Link className='NoUnderline' to='./cards'><li><img alt='kunai' src={kunai} /><p>Cartas</p></li></Link>
-            <Link className='NoUnderline' to='https://bit.ly/meu-portifolio-lucas-eneas'><li><img alt='kunai' src={kunai} /><p>contato</p></li></Link>
+            <Link className='NoUnderline' to='https://bit.ly/meu-portfolio-lucas-eneas'><li><img alt='kunai' src={kunai} /><p>contato</p></li></Link>
           </ul>
         </div>
         <div className='DivCenterHome'>
